@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Places</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+    <link rel="stylesheet" href="general.css">
+    <link rel="stylesheet" href="eightplaces.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=ABeeZee&family=Didact+Gothic&family=Fredoka+One&family=Poppins:wght@300&display=swap"
+        rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=ABeeZee&family=Didact+Gothic&family=Fredoka+One&family=Kalam&family=Poppins:wght@300&display=swap');
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- log IN -->
+    <div class=" modal fade" id="login" aria-hidden="true" aria-labelledby="logIn" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content w-75 LS-modal">
+                <div class="card loginCon">
+                    <div class="card-body">
+                        <div class="card-body bg-white loginBody">
+
+                            <h4 class="text-center LS-MainText">Log In</h4>
+
+                            <form action="">
+                                <div class="mt-4">
+                                    <div class="inputGroup w-100">
+                                        <input type="text" required="" autocomplete="off">
+                                        <label for="name">email</label>
+                                    </div>
+                                </div>
+
+                                <div class="mt-4">
+                                    <div class="inputGroup w-100 inpG">
+                                        <input type="password" required="" autocomplete="off" id="password">
+                                        <span class="Eye" onclick="showPwL()">
+                                            <i class="fa-regular fa-eye" id="show"></i>
+                                            <i class="fa-regular fa-eye-slash" id="hide"></i>
+                                        </span>
+                                        <label for="password">password</label>
+                                    </div>
+                                </div>
+                                <div>
+                                    <p class="text-NeedAnAcc">New to here? <a href="" class="text-SignIn"
+                                            data-bs-target="#signup" data-bs-toggle="modal">Sign Up</a></p>
+                                </div>
+
+                            </form>
+
+                            <div class="mt-3">
+                                <button class="btn btn-Login" data-bs-toggle="popover"
+                                    data-bs-content="Can't Log In">Log
+                                    In</button>
+                            </div>
+
+                            <hr style=" margin-bottom: 0px;">
+
+                            <div class="text-center">
+                                <p class="Or">or</p>
+                                <a href="https://facebook.com"><i class="fa-brands fa-facebook fb"></i></a>
+                                <a href="https://google.com"><i class="fa-brands fa-google google"></i></a>
+                                <a href="https://appleid.apple.com/sign-in"><i class="fa-brands fa-apple apple"></i></a>
+                            </div>
+
+                            <div class="alert alert-danger mt-3">This function won't be work!</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- sign up -->
+    <div class="modal fade" id="signup" aria-hidden="true" aria-labelledby="signup" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content w-75 LS-modal">
+                <div class="card loginCon">
+                    <div class="card-body">
+                        <div class="card-body bg-white loginBody">
+
+                            <h4 class="text-center LS-MainText">Sign Up</h4>
+
+                            <form action="">
+                                <div class="mt-4">
+                                    <div class="inputGroup w-100">
+                                        <input type="text" required="" autocomplete="off">
+                                        <label for="name">email</label>
+                                    </div>
+                                </div>
+
+                                <div class="mt-4">
+                                    <div class="inputGroup w-100 inpG">
+                                        <input type="password" required="6" autocomplete="off" id="passwordS">
+                                        <span class="Eye" onclick="showPwS()">
+                                            <i class="fa-regular fa-eye" id="showS"></i>
+                                            <i class="fa-regular fa-eye-slash" id="hideS"></i>
+                                        </span>
+                                        <label for="password">password</label>
+                                    </div>
+                                </div>
+                                <div>
+                                    <p class="text-NeedAnAcc">Already have an account? <a href="#" class="text-SignIn"
+                                            data-bs-target="#login" data-bs-toggle="modal">Log
+                                            In</a></p>
+                                </div>
+                                <div class="mt-3">
+                                    <button class="btn-Login">Sign Up</button>
+                                </div>
+                            </form>
+
+                            <hr style="margin-bottom: 0px;">
+
+                            <div class="text-center">
+                                <p class="Or">or</p>
+                                <a href="https://facebook.com"><i class="fa-brands fa-facebook fb"></i></a>
+                                <a href="https://google.com"><i class="fa-brands fa-google google"></i></a>
+                                <a href="https://appleid.apple.com/sign-in"><i class="fa-brands fa-apple apple"></i></a>
+                            </div>
+
+                            <div class="alert alert-danger mt-3">This function won't be work!</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- navbar for pc screen -->
+    <nav class="d-none d-lg-flex d-md-none sticky-top fixedNav whiteBgNav" id="nav">
+
+        <div class="col navbar d-md-flex">
+            <h2 class="ms-1 logo">LOGO</h2>
+        </div>
+
+        <div class="navbar navbar-light col lgNav d-md-flex">
+            <ul class="nav whiteBgNav">
+                <li class="nav-item">
+                    <a class="nav-link navText " href="main-page.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link navText" href="aboutus.html">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link navText" href="contactUs.html">Contact</a>
+                </li>
+                <li class="nav-item DropdownNav">
+                    <a class="nav-link navText dropdownToggle text-primary" href="#" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">Pages</a>
+                    <ul class="dropdownMenu">
+                        <li class="col-12 dropdownLi"><a href="places.html"
+                                class="dropdownItems text-primary">Places</a>
+                        </li>
+                        <li class="col-12 dropdownLi"><a href="activities.html" class="dropdownItems">Activities</a>
+                        </li>
+                        <li class="col-12 dropdownLi"><a href="food.html" class="dropdownItems">Foods</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <div class="col navbar d-md-none d-lg-flex d-none">
+            <button class="btn btn-outline-primary btn-sm login-ms" data-bs-target="#login" data-bs-toggle="modal">Log
+                In</button>
+
+            <button class="btn btn-outline-primary btn-sm ms-2" data-bs-target="#signup" data-bs-toggle="modal">Sign
+                Up</button>
+        </div>
+    </nav>
+
+    <div class="d-inline d-lg-none">
+        <button class="btn btn-outline-dark mx-2 mt-2" style="position: relative;" type="button"
+            data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+    </div>
+
+
+    <!-- navbar for mobile screen offcanvas-->
+    <div class="offcanvas offcanvas-start d-inline d-lg-none" tabindex="-1" id="offcanvasNavbar"
+        aria-labelledby="offcanvasNavbarLabel">
+
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+
+        <div class="offcanvas-body offcanvaBody">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                <li class="nav-item">
+                    <a href="logIn.html" class="nav-link offcanvaText">Log
+                        In</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link offcanvaText" aria-current="page" href="main-page.html">Home</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link offcanvaText" href="aboutus.html">About</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link offcanvaText" href="contactUs.html">Contact</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link offcanvaText" href="places.html">Links</a>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="AC-firstCon">
+            <div>
+                <h1 class="A-MainHeading">Best Places To Visit In Myanmar...</h1>
+                <p class="miniLinking"><a href="main-page.html" class="text-secondary">Home</a>
+                    <i class="fas fa-angle-right iniLinkingArrow"></i> Places
+                </p>
+            </div>
+
+
+            <div class="container mt-2 mt-lg-4">
+                <div class="row container s4-con">
+                    <a href="activities.html"
+                        class="col-lg col-12 s4-Categories mx-lg-3 mt-3 mt-lg-0  bg-black text-white">
+                        <p>Places <i class="fa-solid fa-location-dot"></i></p>
+                    </a>
+
+                    <a href="activities.html" class="col-lg col-12  s4-Categories mx-lg-3 mt-3 mt-lg-0">
+                        <p>Activities <i class="fa-solid fa-list-check"></i></p>
+                    </a>
+
+                    <a href="food.html" class="col-lg col-12  s4-Categories mx-lg-3 mt-3 mt-lg-0 ">
+                        <p>Foods <i class="fa-solid fa-utensils"></i></p>
+                    </a>
+
+                </div>
+            </div>
+            <hr class="mt-4">
+
+            <div class="mt-5">
+                <div class="AC-mainCon" id="bagan-place">
+
+                    <!-- one - Bagan -->
+                    <div class="AC-Img">
+                        <img src="bagan-uhd.jpg" alt="" width="100%">
+                        <div class="row">
+                            <h2 class="mt-3 AC-Heading col">Bagan/ Temples of Bagan</h2>
+                            <button class="col-2 btn btn-outline-primary w-25 h-25 mt-3 me-3 places-btn"
+                                data-bs-target="#bagan-view" data-bs-toggle="modal">view</button>
+                            <div class="modal modal-lg fade" id="bagan-view" aria-hidden="true"
+                                aria-labelledby="bagan-view" tabindex="-1">
+                                <div class="modal-dialog modal-dialog-top">
+                                    <div class="modal-content w-100 p-3">
+                                        <button type="button" class="btn-close mb-4 ms-auto" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                        <iframe class="places-view-iframe"
+                                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8884.656216268493!2d94.86488338687302!3d21.17187617157011!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30b5e50393d8ca61%3A0x371a4717c3e89981!2sOld%20Bagan%2C%20Myanmar%20(Burma)!5e1!3m2!1sen!2ssg!4v1673502245334!5m2!1sen!2ssg"
+                                            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <p class="AC-LeftBorder mb-4 mt-4">Bagan located in the Mandalay Region of Myanmar is a
+                            historic city filled with thousands of Buddhist pagodas. Bagan is
+                            one of the world's greatest archaeological sites on earth. Your imagination will be captured
+                            by its mysterious
+                            appearance.</p>
+                        <p class="AC-Txt" id="shwedagon-place">Visitors are treated to a picturesque setting as the
+                            temples rise above the
+                            canopy of trees. In addition to
+                            the temples, tourists can take a cruise from Mandalay to Bagan along the Ayeyarwady River
+                            for a fun day trip. Along the
+                            route, you can take in the beautiful views of the mountains and other sights.</p>
+                        <hr class="mt-4">
+                    </div>
+
+
+                    <!-- two - Shwedagon  -->
+                    <div class="AC-Img mt-4">
+                        <img src="shwedagon-ac.jpg" alt="" width="100%">
+                        <div class="row">
+                            <h2 class="mt-3 AC-Heading col">Shwedagon</h2>
+
+                            <button class="col-2 btn btn-outline-primary w-25 h-25 mt-3 me-3 places-btn"
+                                data-bs-target="#shwedagon-view" data-bs-toggle="modal">view</button>
+
+                            <div class="modal modal-lg fade" id="shwedagon-view" aria-hidden="true"
+                                aria-labelledby="shwedagon-view" tabindex="-1">
+                                <div class="modal-dialog modal-dialog-top">
+                                    <div class="modal-content w-100 p-3">
+                                        <button type="button" class="btn-close mb-4 ms-auto" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                        <iframe class="places-view-iframe"
+                                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1917.4933901313038!2d96.15246653195292!3d16.798588478447343!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30c1eb5e3fffe455%3A0xb7d3ad319654cf6e!2sShwedagon%20Pagoda!5e1!3m2!1sen!2ssg!4v1673502690559!5m2!1sen!2ssg"
+                                            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <p class="AC-LeftBorder  mb-4 mt-4">The Shwedagon Pagoda, also known as the Golden Temple, is
+                            regarded as Myanmar's most sacred temple and symbol of
+                            Myanmar. Additionally, it is the most significant Buddhist pilgrimage place in Myanmar.
+                            Every day, numerous devotees
+                            visit the Shwedagon. They walk around the stupa and make offerings to the Buddha.</p>
+                        <p class="AC-Txt">There is a shrine with a Buddha image at each corner of the octagonal pagoda
+                            (one for each day of the week - Wednesday
+                            is split into two). According to Eastern astrology, each temple is associated with a planet
+                            and an animal sign. Burmese
+                            people make offerings of flowers, candles, and water to the shrine belonging to the day of
+                            their birth.</p>
+                        <hr class="mt-4">
+
+                        <div class="A-quoteCon " id="myeik-place">
+                            <i class="fa-solid fa-quote-right text-primary"></i>
+                            <p class="fa-quote">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores
+                            </p>
+                            <p class="fa-quoteT"> - lorem ipsum
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- three - myeik -->
+                    <div class="AC-Img mt-4">
+                        <img src="myiek-ac.jpg" alt="" width="100%">
+                        <div class="row">
+                            <h2 class="mt-3 AC-Heading col">Mergui Archipelago</h2>
+
+                            <button class="col-2 btn btn-outline-primary w-25 h-25 mt-3 me-3 places-btn"
+                                data-bs-target="#myeik-view" data-bs-toggle="modal">view</button>
+
+                            <div class="modal modal-lg fade" id="myeik-view" aria-hidden="true"
+                                aria-labelledby="myeik-view" tabindex="-1">
+                                <div class="modal-dialog modal-dialog-top">
+                                    <div class="modal-content w-100 p-3">
+                                        <button type="button" class="btn-close mb-4 ms-auto" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                        <iframe class="places-view-iframe"
+                                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d62745.98164463404!2d98.29758489781489!3d11.775763446339447!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30f9904f8a32b027%3A0x21d7bbff407263bb!2sMyeik%20Archipelago!5e1!3m2!1sen!2ssg!4v1673502884377!5m2!1sen!2ssg"
+                                            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="AC-LeftBorder mb-4 mt-4">The Myeik or Mergui Archipelago lies in the Andaman Sea off
+                            the coast of southern Myanmar. More than 800 islands make up
+                            this region, ranging in size from tiny ones with a few palm trees to larger ones with
+                            several hundred square kilometers.
+                            The archipelago provides fantastic chances for diving and exploring among amazing coral
+                            reefs and aquatic life.</p>
+                        <p class="AC-Txt" id="inle-place">The islands of Myeik Archipelago provide a wide range of
+                            panoramic views,
+                            sights, and adventurous activities. In
+                            addition, you can hike through the tropical valleys and kayak through mangroves and up
+                            rivers. These opportunities for
+                            exploration are almost limitless. A tremendously diverse range of wildlife can also be found
+                            on the islands.</p>
+                        <hr class="mt-4">
+                    </div>
+
+                    <!-- four - inle -->
+                    <div class="AC-Img mt-5">
+                        <img src="inle-rec1.jpg" alt="" width="100%">
+                        <div class="row">
+                            <h2 class="mt-3 AC-Heading col">Inle Lake</h2>
+
+                            <button class="col-2 btn btn-outline-primary w-25 h-25 mt-3 me-3 places-btn"
+                                data-bs-target="#inle-view" data-bs-toggle="modal">view</button>
+
+                            <div class="modal modal-lg fade" id="inle-view" aria-hidden="true"
+                                aria-labelledby="inle-view" tabindex="-1">
+                                <div class="modal-dialog modal-dialog-top">
+                                    <div class="modal-content w-100 p-3">
+                                        <button type="button" class="btn-close mb-4 ms-auto" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                        <iframe class="places-view-iframe"
+                                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d142759.13230759566!2d96.83554270469673!3d20.533470679810268!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30ceed8ffad6a757%3A0xe8e599cbb7416c65!2sInle%20Lake!5e1!3m2!1sen!2ssg!4v1673502979944!5m2!1sen!2ssg"
+                                            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="AC-LeftBorder mb-4 mt-4">Inle Lake, the second-largest lake in Myanmar, is situated in
+                            western Shan State. The lake is bordered on all sides by
+                            magnificent, green mountains, providing a spectacular natural vista. Due to the area's
+                            abundance of wildlife and
+                            vegetation, Inle Lake is home to several uncommon species.</p>
+                        <p class="AC-Txt" id="golden-place">One of the most popular tourist destinations in Myanmar is
+                            Inle Lake because
+                            it offers the ideal blend of rural Burmese
+                            culture and mesmerizing natural beauty. A visit to Inle lake and explore the beauty of
+                            nature is a must when visiting
+                            Myanmar.</p>
+                        <hr class="mt-4">
+                    </div>
+
+                    <!-- five Golden rock-->
+                    <div class="AC-Img mt-5">
+                        <img src="Golden-Rock.jpg" alt="" width="100%">
+                        <div class="row">
+                            <h2 class="mt-3 AC-Heading col">Golden Rock</h2>
+
+                            <button class="col-2 btn btn-outline-primary w-25 h-25 mt-3 me-3 places-btn"
+                                data-bs-target="#golden-view" data-bs-toggle="modal">view</button>
+
+                            <div class="modal modal-lg fade" id="golden-view" aria-hidden="true"
+                                aria-labelledby="golden-view" tabindex="-1">
+                                <div class="modal-dialog modal-dialog-top">
+                                    <div class="modal-content w-100 p-3">
+                                        <button type="button" class="btn-close mb-4 ms-auto" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                        <iframe class="places-view-iframe"
+                                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4543.856694381009!2d97.09602165081813!3d17.481625704622004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30c30a774afb2ae1%3A0xe3bbe018e15e96fa!2sKyaik%20Htee%20Yoe%20Pagoda!5e1!3m2!1sen!2ssg!4v1673503064803!5m2!1sen!2ssg"
+                                            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="AC-LeftBorder mb-4 mt-4">Kyaiktiyo Pagoda is one of the top tourist locations in
+                            Myanmar, which
+                            attracts both Buddhists and others who enjoy
+                            sightseeing. The pilgrims, the atmosphere, the smells of incense - all will take you in the
+                            authentic Myanmar.</p>
+                        <p class="AC-Txt" id="popa-place">Golden Rock, commonly known as Kyaiktiyo Pagoda is in
+                            Kyaiktiyo, a municipality in the Mon State of Myanmar. It offers a
+                            breathtaking view of the sky, sea, mountains and pagodas. People believe that it is magical
+                            if they can touch the
+                            boulder. Therefore, by the time they come here, they attempt to touch it once. However,
+                            women don't have the right to
+                            touch or approach.</p>
+                        <hr class="mt-4">
+                    </div>
+
+                    <!-- six - popa -->
+                    <div class="AC-Img mt-5">
+                        <img src="mount-popa.jpg" alt="" width="100%">
+                        <div class="row">
+                            <h2 class="mt-3 AC-Heading col">Mount Popa</h2>
+
+                            <button class="col-2 btn btn-outline-primary w-25 h-25 mt-3 me-3 places-btn"
+                                data-bs-target="#popa-view" data-bs-toggle="modal">view</button>
+
+                            <div class="modal modal-lg fade" id="popa-view" aria-hidden="true"
+                                aria-labelledby="popa-view" tabindex="-1">
+                                <div class="modal-dialog modal-dialog-top">
+                                    <div class="modal-content w-100 p-3">
+                                        <button type="button" class="btn-close mb-4 ms-auto" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                        <iframe class="places-view-iframe"
+                                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d17799.309039555992!2d95.24457187728926!3d20.920727118978192!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30c9f73683f39311%3A0x5f494eb15f63368!2sMt%20Popa!5e1!3m2!1sen!2ssg!4v1673503146559!5m2!1sen!2ssg"
+                                            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="AC-LeftBorder mb-4 mt-4">Bagan is located around 50 kilometers from Mount Popa (Mt.
+                            Popa) in Myanmar. It is about 45-minute drive from Nyaung Oo
+                            Airport, Bagan. Mt. Popa is an extinct volcano that is estimated to have erupted for the
+                            final time, over three hundred
+                            and twenty thousand years ago.</p>
+                        <p class="AC-Txt mb-4 mt-4" id="saddar-place">It was situated 55km southeast of Bagan. Mt. Popa
+                            (Taungkalat) is popularly recognized as an abode of many “Nats”
+                            (spirits of ancient ancestors) who dwell in various parts of the mountain. In the old days,
+                            it was also referred to as
+                            the “Mountain of Spirits”. Along the journey to the top, you will see monkeys waiting for
+                            treats. From Bagan, you can
+                            take a day journey back to Mt. Popa.</p>
+                        <hr class="mt-4">
+                    </div>
+
+                    <!-- seven - saddar -->
+                    <div class="AC-Img mt-5">
+                        <img src="sadder-cae-ac.jpg" alt="" width="100%">
+                        <div class="row">
+                            <h2 class="mt-3 AC-Heading col">Saddar Cave</h2>
+
+                            <button class="col-2 btn btn-outline-primary w-25 h-25 mt-3 me-3 places-btn"
+                                data-bs-target="#saddar-view" data-bs-toggle="modal">view</button>
+
+                            <div class="modal modal-lg fade" id="saddar-view" aria-hidden="true"
+                                aria-labelledby="saddar-view" tabindex="-1">
+                                <div class="modal-dialog modal-dialog-top">
+                                    <div class="modal-content w-100 p-3">
+                                        <button type="button" class="btn-close mb-4 ms-auto" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                        <iframe class="places-view-iframe"
+                                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4561.998382045073!2d97.71595461750294!3d16.740027700000006!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30c2b5c0eaa8862b%3A0x5287a6d9e7db1a7e!2sMahar%20Sadan%20Cave!5e1!3m2!1sen!2ssg!4v1673503230783!5m2!1sen!2ssg"
+                                            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="AC-LeftBorder mb-4 mt-4">Sadder Cave is one of the caves you must see in Hpa An.
+                            Taking a motorcycle taxi is the most convenient way to get to
+                            Sadder Cave on a Myanmar tour; it is around 20 kilometres from Hpa An center.</p>
+                        <p class="AC-Txt" id="ubein-place">One of Kayin State's highlights is a trip to the magnificent
+                            Saddar Cave. The
+                            limestone karst scenery of Zwegabin and
+                            the numerous jagged, mountainous outcrops sprouting abruptly from the paddy surrounding
+                            Hpa-An host myriad spectacular
+                            caves. Saddar involves a cave temple but also a hike through underground passages to the far
+                            side of a mountain and a
+                            return by wooden boat. It really is something special.</p>
+                        <hr class="mt-4">
+                    </div>
+
+                    <!-- eight - U Bein -->
+                    <div class="AC-Img mt-5">
+                        <img src="ubein-ac.jpg" alt="" width="100%">
+                        <div class="row">
+                            <h2 class="mt-3 AC-Heading col">U Bein Bridge</h2>
+
+                            <button class="col-2 btn btn-outline-primary w-25 h-25 mt-3 me-3 places-btn"
+                                data-bs-target="#ubein-view" data-bs-toggle="modal">view</button>
+
+                            <div class="modal modal-lg fade" id="ubein-view" aria-hidden="true"
+                                aria-labelledby="ubein-view" tabindex="-1">
+                                <div class="modal-dialog modal-dialog-top">
+                                    <div class="modal-content w-100 p-3">
+                                        <button type="button" class="btn-close mb-4 ms-auto" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                        <iframe class="places-view-iframe"
+                                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2210.1830924086566!2d96.056725554954!3d21.891572400000012!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30cb0d287da7099d%3A0x7be9ef84f54d9cf5!2sU%20Bein%20Bridge%2C%20Mandalay%2C%20Myanmar%20(Burma)!5e1!3m2!1sen!2ssg!4v1673503434351!5m2!1sen!2ssg"
+                                            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="AC-LeftBorder mb-4 mt-4">U Bein Bridge is a crossing that spans the Taungthaman Lake
+                            near Amarapura in Myanmar. The 1.2 kilometre (0.75 miles)
+                            bridge was built around 1850 and is believed to be the oldest and longest teakwood bridge in
+                            the world.</p>
+                        <p class="AC-Txt mb-4 mt-4">The best time to visit U Bein Bridge is around sunset when the
+                            setting sun frames the bridge and the trees that stand in
+                            the lake. Early in the morning and late in the evening is the most crowded time with
+                            visitors; it provides a popular
+                            atmosphere image for photographers. Therefore, most tourists come at sunset. Visitors to
+                            Myanmar can take a break on
+                            pavilions and seats, while locals can sit and chat with tourists.</p>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <!-- footer -->
+    <footer class="container-fluid footerCon shadow">
+        <div class="container">
+            <div class="row mt-5 alignCenter pt-4">
+
+                <div class="col-12 text-start col-lg ms-0 mt-5 mt-lg-0 d-none d-lg-inline-block ms-lg-5">
+                    <h5 class="footer-hdg">Heading</h5>
+                    <p class="created-footer">Lorem, ipsum dolor sit amet consectetu
+                    </p>
+                    <div class="icons-con d-lg-inline-block d-none">
+                        <a href="#" class="icons-footer"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="#" class="icons-footer"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#" class="icons-footer"><i class="fa-brands fa-discord"></i></a>
+                        <a href="#" class="icons-footer"><i class="fa-brands fa-github"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-10 text-center mt-4 d-lg-none d-inline">
+                    <p class="footer-sub-hdg">DAILY OFFERS & DISCOUNTS</p>
+                    <p class="footer-Txt text-secondary">Subscribe Us</p>
+                    <div>
+                        <form action="">
+                            <div class="input-group input-group-sm mb-3 footer-inpG">
+                                <div class="form-floating">
+                                    <input type="email" class="form-control footer-inpG" id="floatingInputGroup1"
+                                        placeholder="Username">
+                                    <label for="floatingInputGroup1 footer-inpG">email</label>
+                                </div>
+                                <span class="input-group-text footer-groupTxt">
+                                    <button class="btn btn-sm footer-inpG"><i
+                                            class="fa-solid fa-paper-plane"></i></button>
+                                </span>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="col-4 text-start col-lg mt-lg-0 mt-2 ms-lg-5">
+                    <p class="footer-link-heading">Page</p>
+                    <ul class="ulFooter">
+                        <li class="li-footer"><a href="main-page.html">Home</a></li>
+                        <li class="li-footer"><a href="aboutus.html">About</a></li>
+                        <li class="li-footer"><a href="contactUs.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-4 text-start col-lg mt-lg-0 mt-2 ms-lg-5">
+                    <p class="footer-link-heading footer-quickLink">Quick Links</p>
+                    <ul class="ulFooter">
+                        <li class="li-footer"><a href="places.html">Places</a></li>
+                        <li class="li-footer"><a href="activities.html">Activities</a></li>
+                        <li class="li-footer"><a href="food.html">Foods</a></li>
+                        <li class="li-footer"><a href="src.html">Source</a></li>
+                    </ul>
+                </div>
+
+                <div class="text-lg-start col-lg-3 mt-lg-0 ms-lg-5 d-none d-lg-inline">
+                    <p class="footer-sub-hdg">DAILY OFFERS & DISCOUNTS</p>
+                    <p class="footer-Txt text-secondary">Subscribe Us</p>
+                    <div>
+                        <form action="">
+                            <div class="input-group input-group-sm mb-3 footer-inpG">
+                                <div class="form-floating">
+                                    <input type="email" class="form-control footer-inpG" id="floatingInputGroup1"
+                                        placeholder="Username">
+                                    <label for="floatingInputGroup1 footer-inpG">email</label>
+                                </div>
+                                <span class="input-group-text footer-groupTxt">
+                                    <button class="btn btn-sm footer-inpG"><i
+                                            class="fa-solid fa-paper-plane"></i></button>
+                                </span>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+            <hr class="mt-4 hr">
+            <div class="row">
+                <p class="copyright text-secondary col-12 col-lg-12 text-center text-lg-center">
+                    © 2022 -
+                    All
+                    Right Reserved</p>
+                <div class="col-12 text-center mb-3 d-inline-block d-lg-none">
+                    <a href="#" class="icons-footer"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="#" class="icons-footer"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#" class="icons-footer"><i class="fa-brands fa-discord"></i></a>
+                    <a href="#" class="icons-footer"><i class="fa-brands fa-github"></i></a>
+                </div>
+                <a href="#" class="terms text-secondary col-12 col-lg text-lg-start me-lg-4 me-0 d-lg-flex d-none">
+                </a>
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"
+        integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD"
+        crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="general.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,99 @@
+.Bagan-s1-mainCon {
+  position: relative;
+}
+
+.Bagan-bgArea {
+  height: 80vh;
+  width: 100%;
+  background-image: url(Bagan-page.jpg);
+  background-color: rgba(0, 0, 0, 0.3);
+  background-size: cover;
+  background-blend-mode: darken;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: inherit;
+  transition: 0.3s;
+  cursor: default;
+}
+
+.Bagan-Mainheading {
+  position: fixed;
+  top: 35%;
+  left: 3%;
+}
+
+.Bagan-Mainheading h1 {
+  font-family: var(--font-family);
+  font-size: var(--font-size-for-8pl-mtxt);
+  color: white;
+  font-weight: 500;
+}
+
+.Bagan-mainText {
+  position: fixed;
+  top: 40%;
+  left: 3%;
+  width: 35%;
+  text-indent: 30px;
+  letter-spacing: 0.2px;
+  text-align: left;
+  font-size: var(--font-size-for-8pl-txt);
+  font-family: var(--font-family);
+  color: white;
+}
+
+@media only screen and (max-width: 600px) {
+  .Bagan-mainText {
+    position: absolute;
+    width: 90%;
+    text-align: justify;
+    top: 40%;
+    left: 5%;
+  }
+
+  .Bagan-Mainheading {
+    position: absolute;
+    top: 22%;
+    left: 3%;
+  }
+}
+
+.iframeModalCon {
+  position: fixed;
+  top: 25%;
+  right: 3%;
+  float: right;
+}
+
+.iframeOuter {
+  border: 0px;
+  border-radius: 15px;
+  width: 500px;
+  height: 350px;
+  pointer-events: none;
+  transition: 0.3s ease-in;
+}
+
+.iframeInner {
+  order: 0px;
+  border-radius: 15px;
+  width: 100%;
+  height: 500px;
+}
+
+.btn-iframe {
+  position: absolute;
+  top: 44%;
+  left: 36%;
+  padding: 10px 50px;
+  transition: 0.3s;
+  visibility: hidden;
+  opacity: 0;
+  transform: translateY(0.6em);
+}
+
+.iframeModalCon:hover .btn-iframe {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0em);
+}

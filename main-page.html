@@ -1,0 +1,1772 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Main Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+    <link rel="stylesheet" href="general.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=ABeeZee&family=Didact+Gothic&family=Fredoka+One&family=Poppins:wght@300&display=swap"
+        rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=ABeeZee&family=Didact+Gothic&family=Fredoka+One&family=Kalam&family=Poppins:wght@300&display=swap');
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+</head>
+
+<body class="dark">
+    <!---------------------------------------  body --------------------------------------->
+
+
+    <!-- log IN -->
+    <div class="modal fade" id="login" aria-hidden="true" aria-labelledby="logIn" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content w-75 LS-modal">
+                <div class="card loginCon">
+                    <div class="card-body">
+                        <div class="card-body bg-white loginBody">
+
+                            <h4 class="text-center LS-MainText">Log In</h4>
+
+                            <form action="">
+                                <div class="mt-4">
+                                    <div class="inputGroup w-100">
+                                        <input type="text" required="" autocomplete="off">
+                                        <label for="name">email</label>
+                                    </div>
+                                </div>
+
+                                <div class="mt-4">
+                                    <div class="inputGroup w-100 inpG">
+                                        <input type="password" required="" autocomplete="off" id="password">
+                                        <span class="Eye" onclick="showPwL()">
+                                            <i class="fa-regular fa-eye" id="show"></i>
+                                            <i class="fa-regular fa-eye-slash" id="hide"></i>
+                                        </span>
+                                        <label for="password">password</label>
+                                    </div>
+                                </div>
+                                <div>
+                                    <p class="text-NeedAnAcc">New to here? <a href="" class="text-SignIn"
+                                            data-bs-target="#signup" data-bs-toggle="modal">Sign Up</a></p>
+                                </div>
+
+                            </form>
+
+                            <div class="mt-3">
+                                <button class="btn btn-Login" data-bs-toggle="popover"
+                                    data-bs-content="Can't Log In">Log
+                                    In</button>
+                            </div>
+
+                            <hr style=" margin-bottom: 0px;">
+
+                            <div class="text-center">
+                                <p class="Or">or</p>
+                                <a href="https://facebook.com"><i class="fa-brands fa-facebook fb"></i></a>
+                                <a href="https://google.com"><i class="fa-brands fa-google google"></i></a>
+                                <a href="https://appleid.apple.com/sign-in"><i class="fa-brands fa-apple apple"></i></a>
+                            </div>
+
+                            <div class="alert alert-danger mt-3">This function won't be work!</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- sign up -->
+    <div class="modal fade" id="signup" aria-hidden="true" aria-labelledby="signup" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content w-75 LS-modal">
+                <div class="card loginCon">
+                    <div class="card-body">
+                        <div class="card-body bg-white loginBody">
+
+                            <h4 class="text-center LS-MainText">Sign Up</h4>
+
+                            <form action="">
+                                <div class="mt-4">
+                                    <div class="inputGroup w-100">
+                                        <input type="text" required="" autocomplete="off">
+                                        <label for="name">email</label>
+                                    </div>
+                                </div>
+
+                                <div class="mt-4">
+                                    <div class="inputGroup w-100 inpG">
+                                        <input type="password" required="6" autocomplete="off" id="passwordS">
+                                        <span class="Eye" onclick="showPwS()">
+                                            <i class="fa-regular fa-eye" id="showS"></i>
+                                            <i class="fa-regular fa-eye-slash" id="hideS"></i>
+                                        </span>
+                                        <label for="password">password</label>
+                                    </div>
+                                </div>
+                                <div>
+                                    <p class="text-NeedAnAcc">Already have an account? <a href="#" class="text-SignIn"
+                                            data-bs-target="#login" data-bs-toggle="modal">Log
+                                            In</a></p>
+                                </div>
+                                <div class="mt-3">
+                                    <button class="btn-Login">Sign Up</button>
+                                </div>
+                            </form>
+
+                            <hr style="margin-bottom: 0px;">
+
+                            <div class="text-center">
+                                <p class="Or">or</p>
+                                <a href="https://facebook.com"><i class="fa-brands fa-facebook fb"></i></a>
+                                <a href="https://google.com"><i class="fa-brands fa-google google"></i></a>
+                                <a href="https://appleid.apple.com/sign-in"><i class="fa-brands fa-apple apple"></i></a>
+                            </div>
+
+                            <div class="alert alert-danger mt-3">This function won't be work!</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- section-one -->
+    <div class="container-fluid">
+        <div class="d-none d-lg-inline s1-containerRelative">
+            <div class="row">
+
+                <a href="#" class="col-lg-4 s1-bgArea1">
+                    <div class="">
+                        <p class="FirstSectionTexts"></p>
+                    </div>
+                </a>
+
+                <a href="#" class="col-lg-4 s1-bgArea2">
+                    <div class="">
+                        <p class="FirstSectionTexts"></p>
+                    </div>
+                </a>
+
+                <a href="#" class="col-lg-4 s1-bgArea3">
+                    <div class="">
+                        <p class="FirstSectionTexts"></p>
+                    </div>
+                </a>
+
+            </div>
+
+            <div class="MainText">
+                Let's Explore Myanmar
+            </div>
+
+            <!-- navbar for pc screen -->
+            <nav class="d-none d-lg-flex d-md-flex sticky-top fixedNav dark" id="nav">
+
+                <div class="col navbar d-md-flex">
+                    <h2 class="ms-1 logo">LOGO</h2>
+                </div>
+
+                <div class="navbar navbar-light col lgNav me-2 d-md-flex">
+                    <ul class="nav">
+                        <li class="nav-item">
+                            <a class="nav-link navText text-primary" href="main-page.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link navText" href="aboutus.html">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link navText" href="contactUs.html">Contact</a>
+                        </li>
+                        <li class="nav-item DropdownNav">
+                            <a class="nav-link navText dropdownToggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">Pages</a>
+                            <ul class="dropdownMenu">
+                                <li class="col-12 dropdownLi"><a href="places.html" class="dropdownItems">Places</a>
+                                </li>
+                                <li class="col-12 dropdownLi"><a href="activities.html"
+                                        class="dropdownItems">Activities</a></li>
+                                <li class="col-12 dropdownLi"><a href="food.html" class="dropdownItems">Foods</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col navbar d-md-none d-lg-flex d-none">
+                    <button class="btn btn-outline-primary btn-sm login-ms" data-bs-target="#login"
+                        data-bs-toggle="modal">Log
+                        In</button>
+
+                    <button class="btn btn-outline-primary btn-sm ms-2" data-bs-target="#signup"
+                        data-bs-toggle="modal">Sign Up</button>
+                </div>
+            </nav>
+
+        </div>
+    </div>
+
+
+
+
+    <!-- for phones -->
+    <div id="section1-slide" class="carousel slide d-inline d-lg-none carousel-fade" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <a href="#" class="col-12 s1-bgArea1-s carousel-item active">
+                <div class="">
+                    <button class="btn btn-outline-light mx-2 my-2" type="button" data-bs-toggle="offcanvas"
+                        data-bs-target="#offcanvasM" aria-controls="offcanvasNavbar">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                    <div class="MainText-s">
+                        Let's Explore Myanmar
+                    </div>
+                    <p class="FirstSectionTexts ms-1"></p>
+                </div>
+            </a>
+
+            <a href="#" class="col-12 s1-bgArea2-s carousel-item">
+                <div class="">
+                    <button class="btn btn-outline-light mx-2 my-2" type="button" data-bs-toggle="offcanvas"
+                        data-bs-target="#offcanvasM" aria-controls="offcanvasNavbar">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                    <div class="MainText-s">
+                        Let's Explore Myanmar
+                    </div>
+                    <p class="FirstSectionTexts ms-1"></p>
+                </div>
+            </a>
+
+            <a href="#" class="col-12 s1-bgArea3-s carousel-item">
+                <div class="">
+                    <button class="btn btn-outline-light mx-2 my-2" type="button" data-bs-toggle="offcanvas"
+                        data-bs-target="#offcanvasM" aria-controls="offcanvasNavbar">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                    <div class="MainText-s">
+                        Let's Explore Myanmar
+                    </div>
+                    <p class="FirstSectionTexts ms-1"></p>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <!-- navbar for mobile screen offcanvas-->
+    <div class="offcanvas offcanvas-start d-inline d-lg-none" tabindex="-1" id="offcanvasM"
+        aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+
+        <div class="offcanvas-body offcanvaBody">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                <li class="nav-item">
+                    <a href=" logIn.html" class="nav-link offcanvaText">Log
+                        In</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link offcanvaText" aria-current="page" href="main-page.html">Home</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link offcanvaText" href="aboutus.html">About</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link offcanvaText" href="contactUs.html">Contact</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link offcanvaText" href="#">Pages</a>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+
+
+
+    <!-- section-two cards-->
+    <div class="container-fluid mt-3 mt-lg-4" id="section-2">
+
+        <!-- heading-container -->
+        <div class="s2-heading-con container text-center">
+            <p class="text-secondary bold-text s2-sub-sm-headings">TOURIST ATTRACTIONS</p>
+            <h2 class="bold-text s2-sub-lg-headings">Best Places to Visit In Myanmar</h2>
+        </div>
+
+        <!-- card-section-container -->
+        <div class="container d-none d-lg-block d-md-none flex-center ">
+
+            <!-- slide -->
+            <div id="slide-lg-s1" class="carousel slide" data-bs-touch="true">
+                <div class="carousel-inner">
+
+                    <!-- first-slide-group -->
+                    <div class="carousel-item active">
+                        <div class="row s2-card-con mx-5">
+
+                            <!-- first-slide-card-one -->
+                            <a href="places.html#bagan-place"
+                                class="col-lg-5 col-xl-3 mt-3 d-lg-flex justify-content-center s1-s2-card-link">
+                                <div class="card card-lg rounded-4 s2-cards s2-Slide-card">
+                                    <img src="bagan.jfif" class="card-img-top  s2-card-img" alt="">
+                                    <div class="cardHeading card-img-overlay">
+                                        Temples of Bagan
+                                    </div>
+                                </div>
+                            </a>
+
+
+                            <!-- first-slide-card-two -->
+                            <a href="places.html#shwedagon-place"
+                                class="col-lg-5 col-xl-3 mt-3 d-lg-flex justify-content-center s1-s2-card-link">
+                                <div class="card card-lg rounded-4 s2-cards s2-Slide-card">
+                                    <img src="shwe.jfif" class="card-img-top s2-card-img" alt="">
+                                    <div class="cardHeading card-img-overlay">
+                                        Shwedagon
+                                    </div>
+                                </div>
+                            </a>
+
+
+                            <!-- first-slide-card-three -->
+                            <a href="places.html#myeik-place"
+                                class="col-lg-5 col-xl-3 mt-3 d-lg-flex justify-content-center s1-s2-card-link">
+                                <div class="card card-lg rounded-4 s2-cards s2-Slide-card">
+                                    <img src="islands.jfif" class="card-img-top s2-card-img" alt="">
+                                    <div class="cardHeading card-img-overlay">
+
+                                        Mergui Archipelago
+                                    </div>
+                                </div>
+                            </a>
+
+                            <!-- first-slide-card-four -->
+                            <a href="places.html#inle-place"
+                                class="col-lg-5 col-xl-3 mt-3 d-lg-flex justify-content-center s2-card-link">
+                                <div class="card card-lg rounded-4 s2-cards s2-Slide-card">
+                                    <img src="inle.jfif" class="card-img-top  s2-card-img" alt="">
+                                    <div class="cardHeading card-img-overlay">
+                                        Inle Lake
+                                    </div>
+                                </div>
+                            </a>
+
+                        </div>
+                    </div>
+
+                    <!-- second-slide-group -->
+                    <div class="carousel-item me-auto ms-auto">
+                        <div class="row s2-card-con mx-5">
+
+                            <!-- second-slide-card-one -->
+                            <a href="places.html#golden-place"
+                                class="col-lg-5 col-xl-3 mt-3 d-lg-flex justify-content-center s2-card-link">
+                                <div class="card card-lg rounded-4 s2-cards s2-Slide-card">
+                                    <img src="goldenrock.jfif" class="card-img-top s2-card-img" alt="">
+                                    <div class="cardHeading card-img-overlay">
+                                        Golden Rock
+                                    </div>
+                                </div>
+
+                            </a>
+
+                            <!-- second-slide-card-two -->
+                            <a href="places.html#popa-place"
+                                class="col-lg-5 col-xl-3 mt-3 d-lg-flex justify-content-center s2-card-link">
+                                <div class="card card-lg rounded-4 s2-cards s2-Slide-card">
+                                    <img src="popa.jfif" class="card-img-top s2-card-img" alt="">
+                                    <div class="cardHeading card-img-overlay">
+                                        Mount Popa
+                                    </div>
+                                </div>
+                            </a>
+
+                            <!-- second-slide-card-three -->
+                            <a href="places.html#saddar-place"
+                                class="col-lg-5 col-xl-3 mt-3 d-lg-flex justify-content-center s2-card-link">
+                                <div class="card card-lg rounded-4 s2-cards s2-Slide-card">
+                                    <img src="saddar.jfif" class="card-img-top s2-card-img" alt="">
+                                    <div class="cardHeading card-img-overlay">
+                                        Saddar Cave
+                                    </div>
+                                </div>
+                            </a>
+
+                            <!-- second-slide-card-four -->
+                            <a href="places.html#ubein-place"
+                                class="col-lg-5 col-xl-3 mt-3 d-lg-flex justify-content-center s2-card-link">
+                                <div class="card card-lg rounded-4 s2-cards s2-Slide-card">
+                                    <img src="ubein1.jfif" class="card-img-top s2-card-img" alt="">
+                                    <div class="cardHeading card-img-overlay">
+                                        U Bein Bridge
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- left-right slide-button -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#slide-lg-s1" data-bs-slide="prev">
+                    <span class="mt-4" aria-hidden="true">
+                        <i class="fa-solid fa-angle-left slideLgLeft"></i>
+                    </span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#slide-lg-s1" data-bs-slide="next">
+                    <span class="mt-4" aria-hidden="true">
+                        <i class="fa-solid fa-angle-right slideLgRight"></i>
+                    </span>
+                </button>
+
+            </div>
+
+        </div>
+
+        <!-- slide for tablet sizes -->
+        <div class="container d-none d-lg-none d-md-flex s2-sm-cardCon md-slide">
+            <div class="row ">
+                <div id="slide-md-s2" class="carousel slide md-child-slide" data-bs-touch="true">
+
+                    <!-- slide -->
+                    <div class="carousel-inner ">
+
+                        <!-- slide-one -->
+                        <div class="carousel-item active">
+                            <div class="row mx-5 d-md-flex">
+                                <a href="places.html#bagan-place"
+                                    class="col-md-6 mt-3 justify-content-center s2-card-link sm-slide">
+                                    <div class="card rounded-4 s2-cards s2-Slide-card">
+                                        <img src="bagan.jfif" class="card-img-top  s2-card-img" alt="">
+                                        <div class="cardHeading card-img-overlay">
+                                            Temples of
+                                            Bagan
+                                        </div>
+                                    </div>
+                                </a>
+
+                                <a href="places.html#shwedagon-place"
+                                    class="col-md-6 mt-3 justify-content-center s2-card-link sm-slide">
+                                    <div class="card rounded-4 s2-cards s2-Slide-card">
+                                        <img src="shwe.jfif" class="card-img-top s2-card-img" alt="">
+                                        <div class="cardHeading card-img-overlay">
+                                            Shwedagon
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- slide-two -->
+                        <div class="carousel-item">
+                            <div class="row mx-5 d-md-flex">
+                                <a href="places.html#myeik-place"
+                                    class="col-md-6 mt-3 justify-content-center s2-card-link sm-slide">
+                                    <div class="card rounded-4 s2-cards s2-Slide-card">
+                                        <img src="islands.jfif" class="card-img-top s2-card-img" alt="">
+                                        <div class="cardHeading card-img-overlay">
+                                            Mergui Archipelago
+                                        </div>
+                                    </div>
+                                </a>
+
+                                <a href="places.html#inle-place"
+                                    class="col-md-6 mt-3 justify-content-center s2-card-link sm-slide">
+                                    <div class="card rounded-4 s2-cards s2-Slide-card">
+                                        <img src="inle.jfif" class="card-img-top  s2-card-img" alt="">
+                                        <div class="cardHeading card-img-overlay">
+                                            Inle Lake
+                                        </div>
+                                    </div>
+                                </a>
+
+                            </div>
+                        </div>
+
+
+                        <!-- slide-three -->
+                        <div class="carousel-item">
+                            <div class="row mx-5 d-md-flex">
+                                <a href="places.html#golden-place"
+                                    class="col-md-6 mt-3 justify-content-center s2-card-link sm-slide">
+                                    <div class="card rounded-4 s2-cards s2-Slide-card">
+                                        <img src="goldenrock.jfif" class="card-img-top s2-card-img" alt="">
+                                        <div class="cardHeading card-img-overlay">
+                                            Golden Rock
+                                        </div>
+                                    </div>
+                                </a>
+
+                                <a href="places.html#popa-place"
+                                    class="col-md-6 mt-3 justify-content-center s2-card-link sm-slide">
+                                    <div class="card rounded-4 s2-cards s2-Slide-card">
+                                        <img src="popa.jfif" class="card-img-top s2-card-img" alt="">
+                                        <div class="cardHeading card-img-overlay">
+                                            Mount Popa
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- slide-four -->
+                        <div class="carousel-item">
+                            <div class="row mx-5 d-md-flex">
+                                <a href="places.html#saddar-place"
+                                    class="col-md-6 mt-3 justify-content-center s2-card-link sm-slide">
+                                    <div class="card rounded-4 s2-cards s2-Slide-card">
+                                        <img src="saddar.jfif" class="card-img-top s2-card-img" alt="">
+                                        <div class="cardHeading card-img-overlay">
+                                            Saddar Cave
+                                        </div>
+                                    </div>
+                                </a>
+
+                                <a href="places.html#ubein-place"
+                                    class="col-md-6 mt-3 justify-content-center s2-card-link sm-slide">
+                                    <div class="card rounded-4 s2-cards s2-Slide-card">
+                                        <img src="ubein1.jfif" class="card-img-top s2-card-img" alt="">
+                                        <div class="cardHeading card-img-overlay">U Bein Bridge</div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <button class="carousel-control-prev p-0 m-0" type="button" data-bs-target="#slide-md-s2"
+                        data-bs-slide="prev">
+                        <span class="" aria-hidden="true">
+                            <i class="fa-solid fa-chevron-left slideIcon"></i>
+                        </span>
+                    </button>
+                    <button class="carousel-control-next p-0 m-0" type="button" data-bs-target="#slide-md-s2"
+                        data-bs-slide="next">
+                        <span class="" aria-hidden="true">
+                            <i class="fa-solid fa-chevron-right slideIcon"></i>
+                        </span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- slide for small sizes -->
+        <div class="container d-inline-block d-lg-none d-md-none s2-sm-cardCon">
+            <div class="row ">
+                <div id="slide-sm-s2" class="carousel slide" data-bs-touch="true">
+
+                    <!-- slide -->
+                    <div class="carousel-inner">
+
+                        <!-- slide-one -->
+                        <div class="carousel-item active">
+                            <a href="places.html#bagan-place"
+                                class="col-12 mt-3 d-lg-flex justify-content-center s2-card-link sm-slide">
+                                <div class="card rounded-4 s2-cards s2-Slide-card">
+                                    <img src="bagan.jfif" class="card-img-top  s2-card-img" alt="">
+                                    <div class="cardHeading card-img-overlay">
+                                        Temples of
+                                        Bagan
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <!-- slide-two -->
+                        <div class="carousel-item">
+                            <a href="places.html#shwedagon-place"
+                                class="col-12 mt-3 d-lg-flex justify-content-center s2-card-link sm-slide">
+                                <div class="card rounded-4 s2-cards s2-Slide-card">
+                                    <img src="shwe.jfif" class="card-img-top s2-card-img" alt="">
+                                    <div class="cardHeading card-img-overlay">
+                                        Shwedagon
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+
+                        <!-- slide-three -->
+                        <div class="carousel-item">
+                            <a href="places.html#myeik-place"
+                                class="col-12 mt-3 d-lg-flex justify-content-center s2-card-link sm-slide">
+                                <div class="card rounded-4 s2-cards s2-Slide-card">
+                                    <img src="islands.jfif" class="card-img-top s2-card-img" alt="">
+                                    <div class="cardHeading card-img-overlay">
+                                        Mergui Archipelago
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <!-- slide-four -->
+                        <div class="carousel-item">
+                            <a href="places.html#inle-place"
+                                class="col-12 mt-3 d-lg-flex justify-content-center s2-card-link sm-slide">
+                                <div class="card rounded-4 s2-cards s2-Slide-card">
+                                    <img src="inle.jfif" class="card-img-top  s2-card-img" alt="">
+                                    <div class="cardHeading card-img-overlay">
+                                        Inle Lake
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+
+                        <!-- slide-five -->
+                        <div class="carousel-item">
+                            <a href="places.html#golden-place"
+                                class="col-12 mt-3 d-lg-flex justify-content-center s2-card-link sm-slide">
+                                <div class="card rounded-4 s2-cards s2-Slide-card">
+                                    <img src="goldenrock.jfif" class="card-img-top s2-card-img" alt="">
+                                    <div class="cardHeading card-img-overlay">
+                                        Golden Rock
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <!-- slide-six -->
+                        <div class="carousel-item">
+                            <a href="places.html#popa-place"
+                                class="col-12 mt-3 d-lg-flex justify-content-center s2-card-link sm-slide">
+                                <div class="card rounded-4 s2-cards s2-Slide-card">
+                                    <img src="popa.jfif" class="card-img-top s2-card-img" alt="">
+                                    <div class="cardHeading card-img-overlay">
+                                        Mount Popa
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <!-- slide-seven -->
+                        <div class="carousel-item">
+                            <a href="places.html#saddar-place"
+                                class="col-12 mt-3 d-lg-flex justify-content-center s2-card-link sm-slide">
+                                <div class="card rounded-4 s2-cards s2-Slide-card">
+                                    <img src="saddar.jfif" class="card-img-top s2-card-img" alt="">
+                                    <div class="cardHeading card-img-overlay">
+                                        Saddar Cave
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <!-- slide-eight -->
+                        <div class="carousel-item">
+                            <a href="places.html#ubein-place"
+                                class="col-12 mt-3 d-lg-flex justify-content-center s2-card-link sm-slide">
+                                <div class="card rounded-4 s2-cards s2-Slide-card">
+                                    <img src="ubein1.jfif" class="card-img-top s2-card-img" alt="">
+                                    <div class="cardHeading card-img-overlay">U Bein Bridge</div>
+                                </div>
+                            </a>
+                        </div>
+
+                    </div>
+
+                    <button class="carousel-control-prev p-0 m-0" type="button" data-bs-target="#slide-sm-s2"
+                        data-bs-slide="prev">
+                        <span class="" aria-hidden="true">
+                            <i class="fa-solid fa-chevron-left slideIcon"></i>
+                        </span>
+                    </button>
+                    <button class="carousel-control-next p-0 m-0" type="button" data-bs-target="#slide-sm-s2"
+                        data-bs-slide="next">
+                        <span class="" aria-hidden="true">
+                            <i class="fa-solid fa-chevron-right slideIcon"></i>
+                        </span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- heading-container -->
+        <div class="s2-heading-con container text-center mt-4">
+            <p class="text-secondary bold-text s2-sub-sm-headings">ACTIVITIES</p>
+            <h2 class="bold-text s2-sub-lg-headings">Best Activities to Do In Myanmar</h2>
+        </div>
+
+        <!-- card-section-container activities-->
+        <div class="container d-none d-lg-block d-md-none flex-center">
+
+            <!-- slide -->
+            <div id="slide-lg-ac" class="carousel slide" data-bs-touch="true">
+                <div class="carousel-inner">
+
+                    <!-- first-slide-group -->
+                    <div class="carousel-item active">
+                        <div class="row s2-card-con mx-5">
+
+                            <!-- first-slide-card-one -->
+                            <a href="activities.html#balloons-activitie"
+                                class="col-lg-5 col-xl-3 col-md-7 col-12 mt-3 d-lg-flex justify-content-center s1-s2-card-link">
+                                <div class="card card-lg rounded-4 s2-cards s2-Slide-card">
+                                    <img src="mp-1.jpg" class="card-img-top  s2-card-img" alt="">
+                                    <div class="cardHeading card-img-overlay">
+                                        Balloon ride over Bagan
+                                    </div>
+                                </div>
+                            </a>
+
+
+                            <!-- first-slide-card-two -->
+                            <a href="activities.html#thanaka-activitie"
+                                class="col-lg-5 col-xl-3 col-md-7 col-12 mt-3 d-lg-flex justify-content-center s1-s2-card-link">
+                                <div class="card card-lg rounded-4 s2-cards s2-Slide-card">
+                                    <img src="thanaka-wear.jpg" class="card-img-top s2-card-img" alt="">
+                                    <div class="cardHeading card-img-overlay">
+                                        Wear Thanaka
+                                    </div>
+                                </div>
+                            </a>
+
+
+                            <!-- first-slide-card-three -->
+                            <a href="activities.html#pilgrimage-activitie"
+                                class="col-lg-5 col-xl-3 col-md-7 col-12 mt-3 d-lg-flex justify-content-center s1-s2-card-link">
+                                <div class="card card-lg rounded-4 s2-cards s2-Slide-card">
+                                    <img src="goldenP-ac.jpg" class="card-img-top s2-card-img" alt="">
+                                    <div class="cardHeading card-img-overlay">
+                                        Make a pilgrimage to the golden rock
+                                    </div>
+                                </div>
+                            </a>
+
+                            <!-- first-slide-card-four -->
+                            <a href="activities.html#craft-activitie"
+                                class="col-lg-5 col-xl-3 col-md-7 col-12 mt-3 d-lg-flex justify-content-center s2-card-link">
+                                <div class="card card-lg rounded-4 s2-cards s2-Slide-card">
+                                    <img src="mandalay-craft-ac.jpeg" class="card-img-top  s2-card-img" alt="">
+                                    <div class="cardHeading card-img-overlay">
+                                        Visit Mandalay's craft workshop
+                                    </div>
+                                </div>
+                            </a>
+
+                        </div>
+                    </div>
+
+                    <!-- second-slide-group -->
+                    <div class="carousel-item me-auto ms-auto">
+                        <div class="row s2-card-con mx-5">
+
+                            <!-- second-slide-card-one -->
+                            <a href="activities.html#temples-activitie"
+                                class="col-lg-5 col-xl-3 col-md-7 col-12 mt-3 d-lg-flex justify-content-center s2-card-link">
+                                <div class="card card-lg rounded-4 s2-cards s2-Slide-card">
+                                    <img src="explore-bagan-ac.jpg" class="card-img-top s2-card-img" alt="">
+                                    <div class="cardHeading card-img-overlay">
+                                        Explore the temples of Bagan
+                                    </div>
+                                </div>
+
+                            </a>
+
+                            <!-- second-slide-card-two -->
+                            <a href="activities.html#climb-activitie"
+                                class="col-lg-5 col-xl-3 col-md-7 col-12 mt-3 d-lg-flex justify-content-center s2-card-link">
+                                <div class="card card-lg rounded-4 s2-cards s2-Slide-card">
+                                    <img src="popa.jfif" class="card-img-top s2-card-img" alt="">
+                                    <div class="cardHeading card-img-overlay">
+                                        Climb the 777 steps to Mount Popa
+                                    </div>
+                                </div>
+                            </a>
+
+                            <!-- second-slide-card-three -->
+                            <a href="activities.html#lifestyle-activitie"
+                                class="col-lg-5 col-xl-3 col-md-7 col-12 mt-3 d-lg-flex justify-content-center s2-card-link">
+                                <div class="card card-lg rounded-4 s2-cards s2-Slide-card">
+                                    <img src="explore-inle.jpg" class="card-img-top s2-card-img" alt="">
+                                    <div class="cardHeading card-img-overlay">
+                                        Explore the Inthas' lifestyles
+                                    </div>
+                                </div>
+                            </a>
+
+                            <!-- second-slide-card-four -->
+                            <a href="#"
+                                class="col-lg-5 col-xl-3 col-md-7 col-12 mt-3 d-lg-flex justify-content-center s2-card-link">
+                                <!-- <div class="card card-lg rounded-4 s2-cards s2-Slide-card">
+                                    <img src="ubein1.jfif" class="card-img-top s2-card-img" alt="">
+                                    <div class="cardHeading card-img-overlay">
+                                        U Bein Bridge
+                                    </div>
+                                </div> -->
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- left-right slide-button -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#slide-lg-ac" data-bs-slide="prev">
+                    <span class="mt-4" aria-hidden="true">
+                        <i class="fa-solid fa-angle-left slideLgLeft"></i>
+                    </span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#slide-lg-ac" data-bs-slide="next">
+                    <span class="mt-4" aria-hidden="true">
+                        <i class="fa-solid fa-angle-right slideLgRight"></i>
+                    </span>
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- slide for tablet sizes -->
+        <div class="container d-none d-lg-none d-md-flex s2-sm-cardCon md-slide">
+            <div class="row ">
+                <div id="slide-md-ac" class="carousel slide md-child-slide" data-bs-touch="true">
+
+                    <!-- slide -->
+                    <div class="carousel-inner ">
+
+                        <!-- slide-one -->
+                        <div class="carousel-item active">
+                            <div class="row mx-5 d-md-flex">
+                                <a href="activities.html#balloons-activitie"
+                                    class="col-md-6 mt-3 justify-content-center s2-card-link sm-slide">
+                                    <div class="card rounded-4 s2-cards s2-Slide-card">
+                                        <img src="mp-1.jpg" class="card-img-top  s2-card-img" alt="">
+                                        <div class="cardHeading card-img-overlay">
+                                            Balloon ride over Bagan
+                                        </div>
+                                    </div>
+                                </a>
+
+                                <a href="activities.html#thanaka-activitie"
+                                    class="col-md-6 mt-3 justify-content-center s2-card-link sm-slide">
+                                    <div class="card rounded-4 s2-cards s2-Slide-card">
+                                        <img src="thanaka-wear.jpg" class="card-img-top s2-card-img" alt="">
+                                        <div class="cardHeading card-img-overlay">
+                                            Wear Thanaka
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- slide-two -->
+                        <div class="carousel-item">
+                            <div class="row mx-5 d-md-flex">
+                                <a href="activities.html#pilgrimage-activitie"
+                                    class="col-md-6 mt-3 justify-content-center s2-card-link sm-slide">
+                                    <div class="card rounded-4 s2-cards s2-Slide-card">
+                                        <img src="goldenP-ac.jpg" class="card-img-top s2-card-img" alt="">
+                                        <div class="cardHeading card-img-overlay">
+                                            Make a pilgrimage to the golden rock
+                                        </div>
+                                    </div>
+                                </a>
+
+                                <a href="activities.html#craft-activitie"
+                                    class="col-md-6 mt-3 justify-content-center s2-card-link sm-slide">
+                                    <div class="card rounded-4 s2-cards s2-Slide-card">
+                                        <img src="mandalay-craft-ac.jpeg" class="card-img-top  s2-card-img" alt="">
+                                        <div class="cardHeading card-img-overlay">
+                                            Visit Mandalay's craft workshop
+                                        </div>
+                                    </div>
+                                </a>
+
+                            </div>
+                        </div>
+
+
+                        <!-- slide-three -->
+                        <div class="carousel-item">
+                            <div class="row mx-5 d-md-flex">
+                                <a href="activities.html#temples-activitie"
+                                    class="col-md-6 mt-3 justify-content-center s2-card-link sm-slide">
+                                    <div class="card rounded-4 s2-cards s2-Slide-card">
+                                        <img src="explore-bagan-ac.jpg" class="card-img-top s2-card-img" alt="">
+                                        <div class="cardHeading card-img-overlay">
+                                            Explore the temples of Bagan
+                                        </div>
+                                    </div>
+                                </a>
+
+                                <a href="activities.html#climb-activitie"
+                                    class="col-md-6 mt-3 justify-content-center s2-card-link sm-slide">
+                                    <div class="card rounded-4 s2-cards s2-Slide-card">
+                                        <img src="popa.jfif" class="card-img-top s2-card-img" alt="">
+                                        <div class="cardHeading card-img-overlay">
+                                            Climb the 777 steps to Mount Popa
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- slide-four -->
+                        <div class="carousel-item">
+                            <div class="row mx-5 d-md-flex">
+                                <a href="activities.html#lifestyle-activitie"
+                                    class="col-md-6 mt-3 justify-content-center s2-card-link sm-slide">
+                                    <div class="card rounded-4 s2-cards s2-Slide-card">
+                                        <img src="explore-inle.jpg" class="card-img-top s2-card-img" alt="">
+                                        <div class="cardHeading card-img-overlay">
+                                            Explore the Inthas' lifestyles
+                                        </div>
+                                    </div>
+                                </a>
+
+                                <a href="#" class="col-md-6 mt-3 justify-content-center s2-card-link sm-slide">
+                                    <div class="card rounded-4 s2-cards s2-Slide-card">
+                                        <!-- <img src="ubein1.jfif" class="card-img-top s2-card-img" alt="">
+                                        <div class="cardHeading card-img-overlay">U Bein Bridge</div> -->
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <button class="carousel-control-prev p-0 m-0" type="button" data-bs-target="#slide-md-ac"
+                        data-bs-slide="prev">
+                        <span class="" aria-hidden="true">
+                            <i class="fa-solid fa-chevron-left slideIcon"></i>
+                        </span>
+                    </button>
+                    <button class="carousel-control-next p-0 m-0" type="button" data-bs-target="#slide-md-ac"
+                        data-bs-slide="next">
+                        <span class="" aria-hidden="true">
+                            <i class="fa-solid fa-chevron-right slideIcon"></i>
+                        </span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- slide for small sizes -->
+        <div class="container d-sm-inline-block d-lg-none d-md-none s2-sm-cardCon">
+            <div class="row ">
+                <div id="slide-sm-ac" class="carousel slide" data-bs-touch="true">
+
+                    <!-- slide -->
+                    <div class="carousel-inner">
+
+                        <!-- slide-one -->
+                        <div class="carousel-item active">
+                            <a href="activities.html#balloons-activitie"
+                                class="col-lg-3 col-12 col-md-5 mt-3 d-lg-flex justify-content-center s2-card-link sm-slide">
+                                <div class="card rounded-4 s2-cards s2-Slide-card">
+                                    <img src="mp-1.jpg" class="card-img-top  s2-card-img" alt="">
+                                    <div class="cardHeading card-img-overlay">
+                                        Balloon ride over Bagan
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <!-- slide-two -->
+                        <div class="carousel-item">
+                            <a href="activities.html#thanaka-activitie"
+                                class="col-lg-3 col-12 col-md-5 mt-3 d-lg-flex justify-content-center s2-card-link sm-slide">
+                                <div class="card rounded-4 s2-cards s2-Slide-card">
+                                    <img src="thanaka-wear.jpg" class="card-img-top s2-card-img" alt="">
+                                    <div class="cardHeading card-img-overlay">
+                                        Wear Thanaka
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+
+                        <!-- slide-three -->
+                        <div class="carousel-item ">
+                            <a href="activities.html#pilgrimage-activitie"
+                                class="col-lg-3 col-12 col-md-5 mt-3 d-lg-flex justify-content-center s2-card-link sm-slide">
+                                <div class="card rounded-4 s2-cards s2-Slide-card">
+                                    <img src="goldenP-ac.jpg" class="card-img-top s2-card-img" alt="">
+                                    <div class="cardHeading card-img-overlay">
+                                        Make a pilgrimage to the golden rock
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <!-- slide-four -->
+                        <div class="carousel-item">
+                            <a href="activities.html#craft-activitie"
+                                class="col-lg-3 col-12 col-md-5 mt-3 d-lg-flex justify-content-center s2-card-link sm-slide">
+                                <div class="card rounded-4 s2-cards s2-Slide-card">
+                                    <img src="mandalay-craft-ac.jpeg" class="card-img-top  s2-card-img" alt="">
+                                    <div class="cardHeading card-img-overlay">
+                                        Visit Mandalay's craft workshop
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+
+                        <!-- slide-five -->
+                        <div class="carousel-item">
+                            <a href="activities.html#temples-activitie"
+                                class="col-lg-3 col-12 col-md-5 mt-3 d-lg-flex justify-content-center s2-card-link sm-slide">
+                                <div class="card rounded-4 s2-cards s2-Slide-card">
+                                    <img src="explore-bagan-ac.jpg" class="card-img-top s2-card-img" alt="">
+                                    <div class="cardHeading card-img-overlay">
+                                        Explore the temples of Bagan
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <!-- slide-six -->
+                        <div class="carousel-item">
+                            <a href="activities.html#climb-activitie"
+                                class="col-lg-3 col-12 col-md-5 mt-3 d-lg-flex justify-content-center s2-card-link sm-slide">
+                                <div class="card rounded-4 s2-cards s2-Slide-card">
+                                    <img src="popa.jfif" class="card-img-top s2-card-img" alt="">
+                                    <div class="cardHeading card-img-overlay">
+                                        Climb the 777 steps to Mount Popa
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <!-- slide-seven -->
+                        <div class="carousel-item">
+                            <a href="activities.html#lifestyle-activitie"
+                                class="col-lg-3 col-12 col-md-5 mt-3 d-lg-flex justify-content-center s2-card-link sm-slide">
+                                <div class="card rounded-4 s2-cards s2-Slide-card">
+                                    <img src="explore-inle.jpg" class="card-img-top s2-card-img" alt="">
+                                    <div class="cardHeading card-img-overlay">
+                                        Explore the Inthas' lifestyles
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+
+                    </div>
+
+                    <button class="carousel-control-prev p-0 m-0" type="button" data-bs-target="#slide-sm-ac"
+                        data-bs-slide="prev">
+                        <span class="" aria-hidden="true">
+                            <i class="fa-solid fa-chevron-left slideIcon"></i>
+                        </span>
+                    </button>
+                    <button class="carousel-control-next p-0 m-0" type="button" data-bs-target="#slide-sm-ac"
+                        data-bs-slide="next">
+                        <span class="" aria-hidden="true">
+                            <i class="fa-solid fa-chevron-right slideIcon"></i>
+                        </span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- heading-container -->
+        <div class="s2-heading-con container text-center mt-4">
+            <p class="text-secondary bold-text s2-sub-sm-headings">TRADITIONAL FOODS</p>
+            <h2 class="bold-text s2-sub-lg-headings">Best Foods to Try In Myanmar</h2>
+        </div>
+
+        <!-- card-section-container foods-->
+        <div class="container d-none d-lg-block d-md-none flex-center">
+
+            <!-- slide -->
+            <div id="slide-lg-fo" class="carousel slide" data-bs-touch="true">
+                <div class="carousel-inner">
+
+                    <!-- first-slide-group -->
+                    <div class="carousel-item active">
+                        <div class="row s2-card-con mx-5">
+
+                            <!-- first-slide-card-one -->
+                            <a href="food.html#mohinga-food"
+                                class="col-lg-5 col-xl-3 col-md-7 col-12 mt-3 d-lg-flex justify-content-center s1-s2-card-link">
+                                <div class="card card-lg rounded-4 s2-cards s2-Slide-card">
+                                    <img src="mohinga.jfif" class="card-img-top  s2-card-img" alt="">
+                                    <div class="cardHeading card-img-overlay">
+                                        Mohinga
+                                    </div>
+                                </div>
+                            </a>
+
+
+                            <!-- first-slide-card-two -->
+                            <a href="food.html#ohnnonoodle-food"
+                                class="col-lg-5 col-xl-3 col-md-7 col-12 mt-3 d-lg-flex justify-content-center s1-s2-card-link">
+                                <div class="card card-lg rounded-4 s2-cards s2-Slide-card">
+                                    <img src="ohnno.jpg" class="card-img-top s2-card-img" alt="">
+                                    <div class="cardHeading card-img-overlay">
+                                        Ohn no Khao Swè
+                                    </div>
+                                </div>
+                            </a>
+
+
+                            <!-- first-slide-card-three -->
+                            <a href="food.html#nangyi-food"
+                                class="col-lg-5 col-xl-3 col-md-7 col-12 mt-3 d-lg-flex justify-content-center s1-s2-card-link">
+                                <div class="card card-lg rounded-4 s2-cards s2-Slide-card">
+                                    <img src="nangyi.jfif" class="card-img-top s2-card-img" alt="">
+                                    <div class="cardHeading card-img-overlay">
+                                        Nan Gyi Thoke
+                                    </div>
+                                </div>
+                            </a>
+
+                            <!-- first-slide-card-four -->
+                            <a href="food.html#shan-food"
+                                class="col-lg-5 col-xl-3 col-md-7 col-12 mt-3 d-lg-flex justify-content-center s2-card-link">
+                                <div class="card card-lg rounded-4 s2-cards s2-Slide-card">
+                                    <img src="shannoodle.jfif" class="card-img-top  s2-card-img" alt="">
+                                    <div class="cardHeading card-img-overlay">
+                                        Shan Khao swè
+                                    </div>
+                                </div>
+                            </a>
+
+                        </div>
+                    </div>
+
+                    <!-- second-slide-group -->
+                    <div class="carousel-item me-auto ms-auto">
+                        <div class="row s2-card-con mx-5">
+
+                            <!-- second-slide-card-one -->
+                            <a href="food.html#afasfasdf"
+                                class="col-lg-5 col-xl-3 col-md-7 col-12 mt-3 d-lg-flex justify-content-center s2-card-link">
+                                <div class="card card-lg rounded-4 s2-cards s2-Slide-card">
+                                    <img src="tofu.jpg" class="card-img-top s2-card-img" alt="">
+                                    <div class="cardHeading card-img-overlay">
+                                        Tofu Naway
+                                    </div>
+                                </div>
+
+                            </a>
+
+                            <!-- second-slide-card-two -->
+                            <a href="food.html#afasfasdf"
+                                class="col-lg-5 col-xl-3 col-md-7 col-12 mt-3 d-lg-flex justify-content-center s2-card-link">
+                                <div class="card card-lg rounded-4 s2-cards s2-Slide-card">
+                                    <img src="laphet.jfif" class="card-img-top s2-card-img" alt="">
+                                    <div class="cardHeading card-img-overlay">
+                                        Laphet Thoke
+                                    </div>
+                                </div>
+                            </a>
+
+                            <!-- second-slide-card-three -->
+                            <a href="food.html#afasfasdf"
+                                class="col-lg-5 col-xl-3 col-md-7 col-12 mt-3 d-lg-flex justify-content-center s2-card-link">
+                                <div class="card card-lg rounded-4 s2-cards s2-Slide-card">
+                                    <img src="kyayoh.jpg" class="card-img-top s2-card-img" alt="">
+                                    <div class="cardHeading card-img-overlay">
+                                        Kyay Oh
+                                    </div>
+                                </div>
+                            </a>
+
+                            <!-- second-slide-card-four -->
+                            <a href="food.html#afasfasdf"
+                                class="col-lg-5 col-xl-3 col-md-7 col-12 mt-3 d-lg-flex justify-content-center s2-card-link">
+                                <div class="card card-lg rounded-4 s2-cards s2-Slide-card">
+                                    <img src="meeshay.jpg.jpg" class="card-img-top s2-card-img" alt="">
+                                    <div class="cardHeading card-img-overlay">
+                                        Mee shay
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- left-right slide-button -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#slide-lg-fo" data-bs-slide="prev">
+                    <span class="mt-4" aria-hidden="true">
+                        <i class="fa-solid fa-angle-left slideLgLeft"></i>
+                    </span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#slide-lg-fo" data-bs-slide="next">
+                    <span class="mt-4" aria-hidden="true">
+                        <i class="fa-solid fa-angle-right slideLgRight"></i>
+                    </span>
+                </button>
+
+            </div>
+        </div>
+
+
+        <!-- slide for tablet sizes -->
+        <div class="container d-none d-lg-none d-md-flex s2-sm-cardCon md-slide">
+            <div class="row ">
+                <div id="slide-md-fo" class="carousel slide md-child-slide" data-bs-touch="true">
+
+                    <!-- slide -->
+                    <div class="carousel-inner ">
+
+                        <!-- slide-one -->
+                        <div class="carousel-item active">
+                            <div class="row mx-5 d-md-flex">
+                                <a href="food.html#mohinga-food"
+                                    class="col-md-6 mt-3 justify-content-center s2-card-link sm-slide">
+                                    <div class="card rounded-4 s2-cards s2-Slide-card">
+                                        <img src="mohinga.jfif" class="card-img-top  s2-card-img" alt="">
+                                        <div class="cardHeading card-img-overlay">
+                                            Mohinga
+                                        </div>
+                                    </div>
+                                </a>
+
+                                <a href="food.html#ohnnonoodle-food"
+                                    class="col-md-6 mt-3 justify-content-center s2-card-link sm-slide">
+                                    <div class="card rounded-4 s2-cards s2-Slide-card">
+                                        <img src="ohnno.jpg" class="card-img-top s2-card-img" alt="">
+                                        <div class="cardHeading card-img-overlay">
+                                            Ohn no Khao Swè
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- slide-two -->
+                        <div class="carousel-item">
+                            <div class="row mx-5 d-md-flex">
+                                <a href="food.html#nangyi-food"
+                                    class="col-md-6 mt-3 justify-content-center s2-card-link sm-slide">
+                                    <div class="card rounded-4 s2-cards s2-Slide-card">
+                                        <img src="nangyi.jfif" class="card-img-top s2-card-img" alt="">
+                                        <div class="cardHeading card-img-overlay">
+                                            Nan Gyi Thoke
+                                        </div>
+                                    </div>
+                                </a>
+
+                                <a href="food.html#shan-food"
+                                    class="col-md-6 mt-3 justify-content-center s2-card-link sm-slide">
+                                    <div class="card rounded-4 s2-cards s2-Slide-card">
+                                        <img src="shannoodle.jfif" class="card-img-top  s2-card-img" alt="">
+                                        <div class="cardHeading card-img-overlay">
+                                            Shan Khao swè
+                                        </div>
+                                    </div>
+                                </a>
+
+                            </div>
+                        </div>
+
+
+                        <!-- slide-three -->
+                        <div class="carousel-item">
+                            <div class="row mx-5 d-md-flex">
+                                <a href="activities.html#temples-activitie"
+                                    class="col-md-6 mt-3 justify-content-center s2-card-link sm-slide">
+                                    <div class="card rounded-4 s2-cards s2-Slide-card">
+                                        <img src="tofu.jpg" class="card-img-top s2-card-img" alt="">
+                                        <div class="cardHeading card-img-overlay">
+                                            Tofu Naway
+                                        </div>
+                                    </div>
+                                </a>
+
+                                <a href="activities.html#climb-activitie"
+                                    class="col-md-6 mt-3 justify-content-center s2-card-link sm-slide">
+                                    <div class="card rounded-4 s2-cards s2-Slide-card">
+                                        <img src="laphet.jfif" class="card-img-top s2-card-img" alt="">
+                                        <div class="cardHeading card-img-overlay">
+                                            Laphet Thoke
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- slide-four -->
+                        <div class="carousel-item">
+                            <div class="row mx-5 d-md-flex">
+                                <a href="activities.html#lifestyle-activitie"
+                                    class="col-md-6 mt-3 justify-content-center s2-card-link sm-slide">
+                                    <div class="card rounded-4 s2-cards s2-Slide-card">
+                                        <img src="kyayoh.jpg" class="card-img-top s2-card-img" alt="">
+                                        <div class="cardHeading card-img-overlay">
+                                            Kyay Oh
+                                        </div>
+                                    </div>
+                                </a>
+
+                                <a href="#" class="col-md-6 mt-3 justify-content-center s2-card-link sm-slide">
+                                    <div class="card rounded-4 s2-cards s2-Slide-card">
+                                        <img src="meeshay.jpg.jpg" class="card-img-top s2-card-img" alt="">
+                                        <div class="cardHeading card-img-overlay">
+                                            Mee shay
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <button class="carousel-control-prev p-0 m-0" type="button" data-bs-target="#slide-md-fo"
+                        data-bs-slide="prev">
+                        <span class="" aria-hidden="true">
+                            <i class="fa-solid fa-chevron-left slideIcon"></i>
+                        </span>
+                    </button>
+                    <button class="carousel-control-next p-0 m-0" type="button" data-bs-target="#slide-md-fo"
+                        data-bs-slide="next">
+                        <span class="" aria-hidden="true">
+                            <i class="fa-solid fa-chevron-right slideIcon"></i>
+                        </span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- slide for small sizes -->
+        <div class="container d-sm-inline-block d-lg-none d-md-none s2-sm-cardCon">
+            <div class="row ">
+                <div id="slide-sm-fo" class="carousel slide" data-bs-touch="true">
+
+                    <!-- slide -->
+                    <div class="carousel-inner">
+
+                        <!-- slide-one -->
+                        <div class="carousel-item active">
+                            <a href="food.html#mohinga-food"
+                                class="col-lg-3 col-12 col-md-5 mt-3 d-lg-flex justify-content-center s2-card-link sm-slide">
+                                <div class="card rounded-4 s2-cards s2-Slide-card">
+                                    <img src="mohinga.jfif" class="card-img-top  s2-card-img" alt="">
+                                    <div class="cardHeading card-img-overlay">
+                                        Mohinga
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <!-- slide-two -->
+                        <div class="carousel-item">
+                            <a href="food.html#ohnnonoodle-food"
+                                class="col-lg-3 col-12 col-md-5 mt-3 d-lg-flex justify-content-center s2-card-link sm-slide">
+                                <div class="card rounded-4 s2-cards s2-Slide-card">
+                                    <img src="ohnno.jpg" class="card-img-top s2-card-img" alt="">
+                                    <div class="cardHeading card-img-overlay">
+                                        Ohn no Khao Swè
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+
+                        <!-- slide-three -->
+                        <div class="carousel-item">
+                            <a href="food.html#nangyi-food"
+                                class="col-lg-3 col-12 col-md-5 mt-3 d-lg-flex justify-content-center s2-card-link sm-slide">
+                                <div class="card rounded-4 s2-cards s2-Slide-card">
+                                    <img src="nangyi.jfif" class="card-img-top s2-card-img" alt="">
+                                    <div class="cardHeading card-img-overlay">
+                                        Nan Gyi Thoke
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <!-- slide-four -->
+                        <div class="carousel-item">
+                            <a href="food.html#shan-food"
+                                class="col-lg-3 col-12 col-md-5 mt-3 d-lg-flex justify-content-center s2-card-link sm-slide">
+                                <div class="card rounded-4 s2-cards s2-Slide-card">
+                                    <img src="shannoodle.jfif" class="card-img-top  s2-card-img" alt="">
+                                    <div class="cardHeading card-img-overlay">
+                                        Shan Khao swè
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+
+                        <!-- slide-five -->
+                        <div class="carousel-item">
+                            <a href="food.html#afasfasdf"
+                                class="col-lg-3 col-12 col-md-5 mt-3 d-lg-flex justify-content-center s2-card-link sm-slide">
+                                <div class="card rounded-4 s2-cards s2-Slide-card">
+                                    <img src="tofu.jpg" class="card-img-top s2-card-img" alt="">
+                                    <div class="cardHeading card-img-overlay">
+                                        Tofu Naway
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <!-- slide-six -->
+                        <div class="carousel-item">
+                            <a href="food.html#afasfasdf"
+                                class="col-lg-3 col-12 col-md-5 mt-3 d-lg-flex justify-content-center s2-card-link sm-slide">
+                                <div class="card rounded-4 s2-cards s2-Slide-card">
+                                    <img src="laphet.jfif" class="card-img-top s2-card-img" alt="">
+                                    <div class="cardHeading card-img-overlay">
+                                        Laphet Thoke
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <!-- slide-seven -->
+                        <div class="carousel-item">
+                            <a href="food.html#afasfasdf"
+                                class="col-lg-3 col-12 col-md-5 mt-3 d-lg-flex justify-content-center s2-card-link sm-slide">
+                                <div class="card rounded-4 s2-cards s2-Slide-card">
+                                    <img src="kyayoh.jpg" class="card-img-top s2-card-img" alt="">
+                                    <div class="cardHeading card-img-overlay">
+                                        Kyay Oh
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <!-- slide-eight -->
+                        <div class="carousel-item">
+                            <a href="food.html#afasfasdf"
+                                class="col-lg-3 col-12 col-md-5 mt-3 d-lg-flex justify-content-center s2-card-link sm-slide">
+                                <div class="card rounded-4 s2-cards s2-Slide-card">
+                                    <img src="meeshay.jpg.jpg" class="card-img-top s2-card-img" alt="">
+                                    <div class="cardHeading card-img-overlay">Mee shay</div>
+                                </div>
+                            </a>
+                        </div>
+
+                    </div>
+
+                    <button class="carousel-control-prev p-0 m-0" type="button" data-bs-target="#slide-sm-fo"
+                        data-bs-slide="prev">
+                        <span class="" aria-hidden="true">
+                            <i class="fa-solid fa-chevron-left slideIcon"></i>
+                        </span>
+                    </button>
+                    <button class="carousel-control-next p-0 m-0" type="button" data-bs-target="#slide-sm-fo"
+                        data-bs-slide="next">
+                        <span class="" aria-hidden="true">
+                            <i class="fa-solid fa-chevron-right slideIcon"></i>
+                        </span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <!------------------------------------------------------------------------------------------------------------------------->
+    <div class="container">
+        <hr class="container mt-5">
+    </div>
+
+    <!-- section three -->
+    <div class="container PS-Con">
+        <h1 class="fontZ mt-1">Our Partnerships</h1>
+        <div class="row mt-5">
+
+            <div class="col-6 mt-lg-0 col-lg text-center">
+                <object data="logoipsum-3.svg" type=""></object>
+            </div>
+
+            <div class="col-6 mt-lg-0 col-lg text-center">
+                <object data="logoipsum-4.svg" type=""></object>
+            </div>
+
+            <div class="col-6 mt-lg-0 mt-4 col-lg text-center">
+                <object data="logoipsum-5.svg" type=""></object>
+            </div>
+
+            <div class="col-6 mt-lg-0 mt-4 col-lg text-center">
+                <object data="logoipsum-6.svg" type=""></object>
+            </div>
+        </div>
+    </div>
+    <!------------------------------------------------------------------------------------------------------------------------->
+
+    <div class="container mt-5">
+        <div class="container">
+            <div class="card sub-Con shadow-sm">
+                <img src="sub-dots.png" alt="" class="sub-dots1">
+                <object data="logoipsum-3.svg" type="" class="sub-logo"></object>
+                <div class="sub-ConChild">
+                    <h1 class="fontZ sub-heading text-center">Subscribe And get a <br> Special Discount</h1>
+                    <form action="" class="">
+                        <div class="sub-input-group sub-form">
+                            <input type="email" class="sub-input shadow" id="Email" name="Email"
+                                placeholder="Enter Your Email" autocomplete="off">
+                            <input class="button--submit" value="Subscribe" type="submit">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!------------------------------------------------------------------------------------------------------------------------->
+
+    <!-- <div class="container">
+        <div class="container">
+            <img src="waale-hotel.jpg" alt="" width="100%">
+        </div>
+    </div> -->
+
+    <!------------------------------------------------------------------------------------------------------------------------->
+
+    <!-- section five -->
+    <div class="container mt-5">
+        <div class="recCardCon container">
+            <div class="imgCon">
+                <div class="cardRec">
+                    <div class="card-body">
+                        <div class="row exclusiveOfferCon">
+                            <p class="col-12 col-lg exclusiveOffer text-secondary">Special Package</p>
+                            <span class="col-12 col-lg starCon">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star-half-stroke"></i>
+                            </span>
+                        </div>
+                        <h4 class="recHeading">Enjoy Your Vacation In Myanmar</h4>
+                        <p class="text-secondary recText">Book your hotel with us and don't forget to grab an
+                            awesome
+                            hotel deal
+                            to
+                            save massive on your stay.</p>
+                        <p class="recCon4day text-secondary recText">4 Days/5 Nights</p>
+                        <p class="recConprice"><span class="offerDollar">$500</span><span
+                                class="offerDays text-secondary recText">/day</span>
+                        </p>
+                        <button class="btn offerBtn w-100 recText">Book Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!------------------------------------------------------------------------------------------------------------------------->
+
+    <!-- section six -->
+
+
+    <!------------------------------------------------------------------------------------------------------------------------->
+
+    <!-- section seven pills-->
+    <div class="container mt-5">
+        <div class="container Section4ChildCon">
+            <div class="">
+                <h1 class="text-center pillsConText">Explore the Cities</h1>
+                <div class="row pillsCon mt-5">
+                    <div class="col-lg col-6 text-center">
+                        <a class="pillsKidCon" href="#">
+                            <img src="yangon-pills.jfif" alt="" class="pillsImg">
+                            <p class="pillsText">Yangon</p>
+                        </a>
+                    </div>
+                    <div class="col-lg col-6 text-center">
+                        <a class="pillsKidCon" href="#">
+                            <img src="mandalay-pills.jfif" alt="" class="pillsImg">
+                            <p class="pillsText">Mandalay</p>
+                        </a>
+                    </div>
+                    <div class="col-lg col-6 text-center">
+                        <a class="pillsKidCon" href="#">
+                            <img src="naypyidaw-pills.jfif" alt="" class="pillsImg">
+                            <p class="pillsText">Naypyidaw</p>
+                        </a>
+                    </div>
+                    <div class="col-lg col-6 text-center">
+                        <a class="pillsKidCon" href="#">
+                            <img src="pyinoolwin-pills.jfif" alt="" class="pillsImg">
+                            <p class="pillsText">Pyin Oo Lwin</p>
+                        </a>
+                    </div>
+                    <div class="col-lg col-6 text-center">
+                        <a class="pillsKidCon" href="#">
+                            <img src="bago-pills.jfif" alt="" class="pillsImg">
+                            <p class="pillsText">Bago</p>
+                        </a>
+                    </div>
+                    <div class="col-lg col-6 text-center">
+                        <a class="pillsKidCon" href="#">
+                            <img src="mawlamyine-pills.jfif" alt="" class="pillsImg">
+                            <p class="pillsText">Mawlamyine</p>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="row pillsCon mt-3">
+
+                    <div class="col-lg col-6 text-center">
+                        <a class="pillsKidCon" href="#">
+                            <img src="taunggyi-pills.jfif" alt="" class="pillsImg">
+                            <p class="pillsText">Taunggyi</p>
+                        </a>
+                    </div>
+                    <div class="col-lg col-6 text-center">
+                        <a class="pillsKidCon" href="#">
+                            <img src="hpaan-pills.jfif" alt="" class="pillsImg">
+                            <p class="pillsText">Hpa-An</p>
+                        </a>
+                    </div>
+                    <div class="col-lg col-6 text-center">
+                        <a class="pillsKidCon" href="#">
+                            <img src="myeik.jpg" alt="" class="pillsImg">
+                            <p class="pillsText">Myeik</p>
+                        </a>
+                    </div>
+                    <div class="col-lg col-6 text-center">
+                        <a class="pillsKidCon" href="#">
+                            <img src="Pyay.jpg" alt="" class="pillsImg">
+                            <p class="pillsText">Pyay</p>
+                        </a>
+                    </div>
+                    <div class="col-lg col-6 text-center">
+                        <a class="pillsKidCon" href="#">
+                            <img src="Sittwe_View_Point_Park_in_2017_March_26.jpg" alt="" class="pillsImg">
+                            <p class="pillsText">Sittwe</p>
+                        </a>
+                    </div>
+                    <div class="col-lg col-6 text-center">
+                        <a class="pillsKidCon" href="#">
+                            <img src="monywa.jpg" alt="" class="pillsImg">
+                            <p class="pillsText">Monywa</p>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- footer -->
+    <footer class="container-fluid footerCon shadow">
+        <div class="container">
+            <div class="row mt-5 alignCenter pt-4">
+
+                <div class="col-12 text-start col-lg ms-0 mt-5 mt-lg-0 d-none d-lg-inline-block ms-lg-5">
+                    <h5 class="footer-hdg">Heading</h5>
+                    <p class="created-footer">Lorem, ipsum dolor sit amet consectetu
+                    </p>
+                    <div class="icons-con d-lg-inline-block d-none">
+                        <a href="#" class="icons-footer"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="#" class="icons-footer"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#" class="icons-footer"><i class="fa-brands fa-discord"></i></a>
+                        <a href="#" class="icons-footer"><i class="fa-brands fa-github"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-10 text-center mt-4 d-lg-none d-inline">
+                    <p class="footer-sub-hdg">DAILY OFFERS & DISCOUNTS</p>
+                    <p class="footer-Txt text-secondary">Subscribe Us</p>
+                    <div>
+                        <form action="">
+                            <div class="input-group input-group-sm mb-3 footer-inpG">
+                                <div class="form-floating">
+                                    <input type="email" class="form-control footer-inpG" id="floatingInputGroup1"
+                                        placeholder="Username">
+                                    <label for="floatingInputGroup1 footer-inpG">email</label>
+                                </div>
+                                <span class="input-group-text footer-groupTxt">
+                                    <button class="btn btn-sm footer-inpG"><i
+                                            class="fa-solid fa-paper-plane"></i></button>
+                                </span>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="col-4 text-start col-lg mt-lg-0 mt-2 ms-lg-5">
+                    <p class="footer-link-heading">Page</p>
+                    <ul class="ulFooter">
+                        <li class="li-footer"><a href="main-page.html">Home</a></li>
+                        <li class="li-footer"><a href="aboutus.html">About</a></li>
+                        <li class="li-footer"><a href="contactUs.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-4 text-start col-lg mt-lg-0 mt-2 ms-lg-5">
+                    <p class="footer-link-heading footer-quickLink">Quick Links</p>
+                    <ul class="ulFooter">
+                        <li class="li-footer"><a href="places.html">Places</a></li>
+                        <li class="li-footer"><a href="activities.html">Activities</a></li>
+                        <li class="li-footer"><a href="food.html">Foods</a></li>
+                        <li class="li-footer"><a href="src.html">Source</a></li>
+                    </ul>
+                </div>
+
+                <div class="text-lg-start col-lg-3 mt-lg-0 ms-lg-5 d-none d-lg-inline">
+                    <p class="footer-sub-hdg">DAILY OFFERS & DISCOUNTS</p>
+                    <p class="footer-Txt text-secondary">Subscribe Us</p>
+                    <div>
+                        <form action="">
+                            <div class="input-group input-group-sm mb-3 footer-inpG">
+                                <div class="form-floating">
+                                    <input type="email" class="form-control footer-inpG" id="floatingInputGroup1"
+                                        placeholder="Username">
+                                    <label for="floatingInputGroup1 footer-inpG">email</label>
+                                </div>
+                                <span class="input-group-text footer-groupTxt">
+                                    <button class="btn btn-sm footer-inpG"><i
+                                            class="fa-solid fa-paper-plane"></i></button>
+                                </span>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+            <hr class="mt-4 hr">
+            <div class="row">
+                <p class="copyright text-secondary col-12 col-lg-12 text-center text-lg-center">
+                    © 2022 -
+                    All
+                    Right Reserved</p>
+                <div class="col-12 text-center mb-3 d-inline-block d-lg-none">
+                    <a href="#" class="icons-footer"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="#" class="icons-footer"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#" class="icons-footer"><i class="fa-brands fa-discord"></i></a>
+                    <a href="#" class="icons-footer"><i class="fa-brands fa-github"></i></a>
+                </div>
+                <a href="#" class="terms text-secondary col-12 col-lg text-lg-start me-lg-4 me-0 d-lg-flex d-none">
+                </a>
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"
+        integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD"
+        crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="general.js"></script>
+</body>
+
+</html>

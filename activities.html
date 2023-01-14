@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activities</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+    <link rel="stylesheet" href="general.css">
+    <link rel="stylesheet" href="eightplaces.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=ABeeZee&family=Didact+Gothic&family=Fredoka+One&family=Poppins:wght@300&display=swap"
+        rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=ABeeZee&family=Didact+Gothic&family=Fredoka+One&family=Kalam&family=Poppins:wght@300&display=swap');
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- log IN -->
+    <div class=" modal fade" id="login" aria-hidden="true" aria-labelledby="logIn" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content w-75 LS-modal">
+                <div class="card loginCon">
+                    <div class="card-body">
+                        <div class="card-body bg-white loginBody">
+
+                            <h4 class="text-center LS-MainText">Log In</h4>
+
+                            <form action="">
+                                <div class="mt-4">
+                                    <div class="inputGroup w-100">
+                                        <input type="text" required="" autocomplete="off">
+                                        <label for="name">email</label>
+                                    </div>
+                                </div>
+
+                                <div class="mt-4">
+                                    <div class="inputGroup w-100 inpG">
+                                        <input type="password" required="" autocomplete="off" id="password">
+                                        <span class="Eye" onclick="showPwL()">
+                                            <i class="fa-regular fa-eye" id="show"></i>
+                                            <i class="fa-regular fa-eye-slash" id="hide"></i>
+                                        </span>
+                                        <label for="password">password</label>
+                                    </div>
+                                </div>
+                                <div>
+                                    <p class="text-NeedAnAcc">New to here? <a href="" class="text-SignIn"
+                                            data-bs-target="#signup" data-bs-toggle="modal">Sign Up</a></p>
+                                </div>
+
+                            </form>
+
+                            <div class="mt-3">
+                                <button class="btn btn-Login" data-bs-toggle="popover"
+                                    data-bs-content="Can't Log In">Log
+                                    In</button>
+                            </div>
+
+                            <hr style=" margin-bottom: 0px;">
+
+                            <div class="text-center">
+                                <p class="Or">or</p>
+                                <a href="https://facebook.com"><i class="fa-brands fa-facebook fb"></i></a>
+                                <a href="https://google.com"><i class="fa-brands fa-google google"></i></a>
+                                <a href="https://appleid.apple.com/sign-in"><i class="fa-brands fa-apple apple"></i></a>
+                            </div>
+
+                            <div class="alert alert-danger mt-3">This function won't be work!</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- sign up -->
+    <div class="modal fade" id="signup" aria-hidden="true" aria-labelledby="signup" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content w-75 LS-modal">
+                <div class="card loginCon">
+                    <div class="card-body">
+                        <div class="card-body bg-white loginBody">
+
+                            <h4 class="text-center LS-MainText">Sign Up</h4>
+
+                            <form action="">
+                                <div class="mt-4">
+                                    <div class="inputGroup w-100">
+                                        <input type="text" required="" autocomplete="off">
+                                        <label for="name">email</label>
+                                    </div>
+                                </div>
+
+                                <div class="mt-4">
+                                    <div class="inputGroup w-100 inpG">
+                                        <input type="password" required="6" autocomplete="off" id="passwordS">
+                                        <span class="Eye" onclick="showPwS()">
+                                            <i class="fa-regular fa-eye" id="showS"></i>
+                                            <i class="fa-regular fa-eye-slash" id="hideS"></i>
+                                        </span>
+                                        <label for="password">password</label>
+                                    </div>
+                                </div>
+                                <div>
+                                    <p class="text-NeedAnAcc">Already have an account? <a href="#" class="text-SignIn"
+                                            data-bs-target="#login" data-bs-toggle="modal">Log
+                                            In</a></p>
+                                </div>
+                                <div class="mt-3">
+                                    <button class="btn-Login">Sign Up</button>
+                                </div>
+                            </form>
+
+                            <hr style="margin-bottom: 0px;">
+
+                            <div class="text-center">
+                                <p class="Or">or</p>
+                                <a href="https://facebook.com"><i class="fa-brands fa-facebook fb"></i></a>
+                                <a href="https://google.com"><i class="fa-brands fa-google google"></i></a>
+                                <a href="https://appleid.apple.com/sign-in"><i class="fa-brands fa-apple apple"></i></a>
+                            </div>
+
+                            <div class="alert alert-danger mt-3">This function won't be work!</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- navbar for pc screen -->
+    <nav class="d-none d-lg-flex d-md-none sticky-top fixedNav whiteBgNav" id="nav">
+
+        <div class="col navbar d-md-flex">
+            <h2 class="ms-1 logo">LOGO</h2>
+        </div>
+
+        <div class="navbar navbar-light col lgNav d-md-flex">
+            <ul class="nav whiteBgNav">
+                <li class="nav-item">
+                    <a class="nav-link navText " href="main-page.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link navText" href="aboutus.html">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link navText" href="contactUs.html">Contact</a>
+                </li>
+                <li class="nav-item DropdownNav">
+                    <a class="nav-link navText dropdownToggle text-primary" href="#" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">Pages</a>
+                    <ul class="dropdownMenu">
+                        <li class="col-12 dropdownLi"><a href="places.html" class="dropdownItems">Places</a>
+                        </li>
+                        <li class="col-12 dropdownLi"><a href="activities.html"
+                                class="dropdownItems  text-primary">Activities</a>
+                        </li>
+                        <li class="col-12 dropdownLi"><a href="food.html" class="dropdownItems">Foods</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <div class="col navbar d-md-none d-lg-flex d-none">
+            <button class="btn btn-outline-primary btn-sm login-ms" data-bs-target="#login" data-bs-toggle="modal">Log
+                In</button>
+
+            <button class="btn btn-outline-primary btn-sm ms-2" data-bs-target="#signup" data-bs-toggle="modal">Sign
+                Up</button>
+        </div>
+    </nav>
+
+    <div class="d-inline d-lg-none">
+        <button class="btn btn-outline-dark mx-2 my-2" style="position: relative;" type="button"
+            data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+    </div>
+
+
+    <!-- navbar for mobile screen offcanvas-->
+    <div class="offcanvas offcanvas-start d-inline d-lg-none" tabindex="-1" id="offcanvasNavbar"
+        aria-labelledby="offcanvasNavbarLabel">
+
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+
+        <div class="offcanvas-body offcanvaBody">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                <li class="nav-item">
+                    <a href="logIn.html" class="nav-link offcanvaText">Log
+                        In</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link offcanvaText" aria-current="page" href="main-page.html">Home</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link offcanvaText" href="aboutus.html">About</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link offcanvaText" href="contactUs.html">Contact</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link offcanvaText" href="places.html">Links</a>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="AC-firstCon">
+            <div>
+                <h1 class="A-MainHeading">Best Activities To Do In Myanmar...</h1>
+                <p class="miniLinking"><a href="main-page.html" class="text-secondary">Home</a>
+                    <i class="fas fa-angle-right iniLinkingArrow"></i> Activities
+                </p>
+            </div>
+
+
+            <div class="container mt-2 mt-lg-4">
+                <div class="row container s4-con">
+                    <a href="places.html" class="col-lg col-12 s4-Categories mx-lg-3 mt-3 mt-lg-0">
+                        <p>Places <i class="fa-solid fa-location-dot"></i></p>
+                    </a>
+
+                    <a href="food.html" class="col-lg col-12  s4-Categories mx-lg-3 mt-3 mt-lg-0 bg-black text-white">
+                        <p>Activities <i class="fa-solid fa-list-check"></i></p>
+                    </a>
+
+                    <a href="food.html" class="col-lg col-12  s4-Categories mx-lg-3 mt-3 mt-lg-0 ">
+                        <p>Foods <i class="fa-solid fa-utensils"></i></p>
+                    </a>
+
+                </div>
+            </div>
+            <hr class="mt-4">
+
+            <div class="mt-5">
+                <div class="AC-mainCon">
+
+                    <!-- one -->
+                    <div class="AC-Img" id="balloons-activitie">
+                        <img src="balloons-over-bagan.jpg" alt="" width="100%">
+                        <h2 class="mt-3 AC-Heading">Balloon ride over Bagan</h2>
+                        <p class="AC-LeftBorder mb-4 mt-4">Imagine soaring above an ancient city with numerous
+                            Buddhist
+                            stupas and
+                            pagodas everywhere
+                            you look. The Bagan hot air
+                            balloon is a must-do experience where you can enjoy the stunning overview of Bagan when
+                            visiting Myanmar.</p>
+                        <p class="AC-Txt" id="thanaka-activitie">Ballooning season in Bagan runs from the beginning of
+                            October to the middle of
+                            April.
+                            Sunrise is when most rides are
+                            offered, as the cooler morning temperatures allow balloons to float closer to the ancient
+                            stupas for a more detailed
+                            glimpse. Daybreak also tends to bring with it more dramatic layers of haze, dreamily
+                            blanketing the landscape for a
+                            perfect photo opp.</p>
+                        <hr class="mt-4">
+                    </div>
+
+                    <!-- two -->
+                    <div class="AC-Img mt-4">
+                        <img src="thanaka.jpg" alt="" width="100%">
+                        <h2 class="mt-3 AC-Heading">Wear Thanaka</h2>
+                        <p class="AC-LeftBorder  mb-4 mt-4">You'll notice that a yellowish paste covering most
+                            people's faces as you walk through the streets of Myanmar. Burmese
+                            men and women have worn this item, known as thanaka, for more than 2000 years.</p>
+                        <p class="AC-Txt">Thanaka is made from the bark of a specific tree. Preparing the paste and
+                            applying it to the cheeks in circles and other
+                            creative patterns is a time-honored ritual in Myanmar.</p>
+                        <p class="AC-Txt">Thanaka also has a practical use in preventing wrinkles by protecting the
+                            skin
+                            from the sun. Other parts of the face and
+                            body such as the arms are often applied as well.
+                            People in Myanmar consider thanaka a symbol of beauty so if you decide to wear
+                            it yourself, you'll likely receive lots
+                            of compliments.</p>
+
+                        <div class="A-quoteCon " id="pilgrimage-activitie">
+                            <i class="fa-solid fa-quote-right text-primary"></i>
+                            <p class="fa-quote">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores
+                            </p>
+                            <p class="fa-quoteT"> - lorem ipsum
+                            </p>
+                        </div>
+                        <hr class="mt-4">
+                    </div>
+
+                    <!-- three -->
+                    <div class="AC-Img mt-5">
+                        <img src="Golden-Rock.jpg" alt="" width="100%">
+                        <h2 class="mt-3 AC-Heading">Make a Pilgrimage to the Golden Rock</h2>
+                        <p class="AC-LeftBorder mb-4 mt-4">A visit to the Golden Rock or Kyaiktiyo Pagoda is considered
+                            something of a pilgrimage by the locals. The people of
+                            Myanmar travel here from all over the country to see this, one of the most sacred places in
+                            Myanmar.</p>
+                        <p class="AC-Txt">According to the legend, the rock, which is located on a mountain ledge, is
+                            balancing on a strand of the Buddha's hair.
+                            This is the only thing preventing it from falling.
+
+                            On your way to Golden Rock, the enthusiasm of the locals will rub off on you. As you get
+                            closer, you can sense the
+                            excitement. Most guests undoubtedly regard this as a once-in-a-lifetime opportunity or
+                            experience.</p>
+                        <p class="AC-Txt" id="craft-activitie"> People take family pictures and pilgrims gently apply
+                            gold leaf to the rock, a
+                            privilege only granted to men, as women
+                            are not allowed in the direct proximity of Buddhist monuments..</p>
+                        <hr class="mt-4">
+                    </div>
+
+                    <!-- four -->
+                    <div class="AC-Img mt-5">
+                        <img src="mandalay-craft.jpeg" alt="" width="100%">
+                        <h2 class="mt-3 AC-Heading">Visit Mandalay's craft workshop</h2>
+                        <p class="AC-LeftBorder mb-4 mt-4">Mandalay, the last royal capital of Myanmar and today
+                            Myanmar's second largest city, has long been considered as the
+                            cultural capital of the country. It is home to many craftsmen and women and has many
+                            traditional workshops.</p>
+                        <p class="AC-Txt">It is a delightful experience to visit one (or more) of these workshops and
+                            see how people make their amazing works of
+                            art by hand. Artisans carved wood and marble; gold leaf traditional puppet making; taping
+                            Specializing in pottery and
+                            sewing.</p>
+                        <p class="AC-Txt" id="temples-activitie">It is possible to purchase authentic souvenirs from the
+                            workshops you visit.
+                        </p>
+                        <hr class="mt-4">
+                    </div>
+
+                    <!-- five -->
+                    <div class="AC-Img mt-5">
+                        <img src="bagan-temples.jpg" alt="" width="100%">
+                        <h2 class="mt-3 AC-Heading">Explore the temples of Bagan</h2>
+                        <p class="AC-LeftBorder mb-4 mt-4">It is easy to understand why Bagan is one of Myanmar's most
+                            visited tourist attractions. It is a remarkable place with a
+                            very long history.</p>
+                        <p class="AC-Txt">From the ninth to the thirteenth centuries, Bagan was the capital of the Pagan
+                            Kingdom. More than10,000 Buddhist
+                            temples, pagodas and monasteries were built during this period. At its peak, the city was a
+                            cosmopolitan centre for
+                            religious and secular studies, attracting monks and scholars from India, Sri Lanka and
+                            Cambodia.</p>
+                        <p class="AC-Txt" id="climb-activitie">Bagan is the kind of place where you can easily spend a
+                            few days exploring the
+                            temples, brushing up on Myanmar's
+                            history, and learning about Buddhism. A nice bonus is Bagan's world-famous sunrises and
+                            sunsets.</p>
+                        <hr class="mt-4">
+                    </div>
+
+                    <!-- six -->
+                    <div class="AC-Img mt-5">
+                        <img src="mount-popa.jpg" alt="" width="100%">
+                        <h2 class="mt-3 AC-Heading">Climb the 777 steps to Mount Popa</h2>
+                        <p class="AC-LeftBorder mb-4 mt-4" id="lifestyle-activitie">Mount Popa, also known as Taung
+                            Kalat, is a monastery located
+                            on top of an extinct volcano plug. Mount Popa can easily
+                            be visited as a half-day trip from Bagan. If you decide to go, you must be willing to climb
+                            its 777 steps, surrounded by
+                            hundreds of monkeys. It's quite an adventurous and unforgettable experience that will teach
+                            you a lot about Burmese
+                            culture.</p>
+                        <hr class="mt-4">
+                    </div>
+
+                    <!-- seven -->
+                    <div class="AC-Img mt-5">
+                        <img src="inle-ac.jpg" alt="" width="100%">
+                        <h2 class="mt-3 AC-Heading">Explore the Inthas' lifestyles</h2>
+                        <p class="AC-LeftBorder mb-4 mt-4">Inle Lake, famous for its floating villages and gardens, is a
+                            place where you can explore the extraordinary lives of
+                            Inthas. There are several stops you can make on a boat tour of the lake. In the beginning,
+                            you get to see the Intha
+                            fishermen, who use one leg to balance themselves on the front of their boat, and the other
+                            to row.</p>
+                        <p class="AC-Txt">Along with fishing and floating gardens, many cottage industries such as
+                            silversmithing and silk weaving form a
+                            significance of the local economy. You'll see lotus weavers who skillfully perform their
+                            handicrafts at weaving
+                            industries. Silversmiths and blacksmiths also have their workshops on the lake, and you can
+                            visit a cheroot factory. All
+                            these craftsmen will happily show you, their skills.</p>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <!-- footer -->
+    <footer class="container-fluid footerCon shadow">
+        <div class="container">
+            <div class="row mt-5 alignCenter pt-4">
+
+                <div class="col-12 text-start col-lg ms-0 mt-5 mt-lg-0 d-none d-lg-inline-block ms-lg-5">
+                    <h5 class="footer-hdg">Heading</h5>
+                    <p class="created-footer">Lorem, ipsum dolor sit amet consectetu
+                    </p>
+                    <div class="icons-con d-lg-inline-block d-none">
+                        <a href="#" class="icons-footer"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="#" class="icons-footer"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#" class="icons-footer"><i class="fa-brands fa-discord"></i></a>
+                        <a href="#" class="icons-footer"><i class="fa-brands fa-github"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-10 text-center mt-4 d-lg-none d-inline">
+                    <p class="footer-sub-hdg">DAILY OFFERS & DISCOUNTS</p>
+                    <p class="footer-Txt text-secondary">Subscribe Us</p>
+                    <div>
+                        <form action="">
+                            <div class="input-group input-group-sm mb-3 footer-inpG">
+                                <div class="form-floating">
+                                    <input type="email" class="form-control footer-inpG" id="floatingInputGroup1"
+                                        placeholder="Username">
+                                    <label for="floatingInputGroup1 footer-inpG">email</label>
+                                </div>
+                                <span class="input-group-text footer-groupTxt">
+                                    <button class="btn btn-sm footer-inpG"><i
+                                            class="fa-solid fa-paper-plane"></i></button>
+                                </span>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="col-4 text-start col-lg mt-lg-0 mt-2 ms-lg-5">
+                    <p class="footer-link-heading">Page</p>
+                    <ul class="ulFooter">
+                        <li class="li-footer"><a href="main-page.html">Home</a></li>
+                        <li class="li-footer"><a href="aboutus.html">About</a></li>
+                        <li class="li-footer"><a href="contactUs.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-4 text-start col-lg mt-lg-0 mt-2 ms-lg-5">
+                    <p class="footer-link-heading footer-quickLink">Quick Links</p>
+                    <ul class="ulFooter">
+                        <li class="li-footer"><a href="places.html">Places</a></li>
+                        <li class="li-footer"><a href="activities.html">Activities</a></li>
+                        <li class="li-footer"><a href="food.html">Foods</a></li>
+                        <li class="li-footer"><a href="src.html">Source</a></li>
+                    </ul>
+                </div>
+
+                <div class="text-lg-start col-lg-3 mt-lg-0 ms-lg-5 d-none d-lg-inline">
+                    <p class="footer-sub-hdg">DAILY OFFERS & DISCOUNTS</p>
+                    <p class="footer-Txt text-secondary">Subscribe Us</p>
+                    <div>
+                        <form action="">
+                            <div class="input-group input-group-sm mb-3 footer-inpG">
+                                <div class="form-floating">
+                                    <input type="email" class="form-control footer-inpG" id="floatingInputGroup1"
+                                        placeholder="Username">
+                                    <label for="floatingInputGroup1 footer-inpG">email</label>
+                                </div>
+                                <span class="input-group-text footer-groupTxt">
+                                    <button class="btn btn-sm footer-inpG"><i
+                                            class="fa-solid fa-paper-plane"></i></button>
+                                </span>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+            <hr class="mt-4 hr">
+            <div class="row">
+                <p class="copyright text-secondary col-12 col-lg-12 text-center text-lg-center">
+                    © 2022 -
+                    All
+                    Right Reserved</p>
+                <div class="col-12 text-center mb-3 d-inline-block d-lg-none">
+                    <a href="#" class="icons-footer"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="#" class="icons-footer"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#" class="icons-footer"><i class="fa-brands fa-discord"></i></a>
+                    <a href="#" class="icons-footer"><i class="fa-brands fa-github"></i></a>
+                </div>
+                <a href="#" class="terms text-secondary col-12 col-lg text-lg-start me-lg-4 me-0 d-lg-flex d-none">
+                </a>
+            </div>
+
+        </div>
+
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"
+        integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD"
+        crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="general.js"></script>
+</body>
+
+</html>
